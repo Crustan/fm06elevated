@@ -1,0 +1,187 @@
+<screen name="match" title="Match Screen" version="1.0">
+
+	<boolean id="save_current_state" value="true"/>
+	
+	<!-- items arranged from top to bottom - last item fills remaining space -->
+	<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0" gap="0"/>
+	
+	<!-- items stretched to fit width of screen -->
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" layout_children="true"/>
+	
+	<flags id="asub" value="mpnl"/>
+	<flags id="dsub" value="mpmp"/>
+	
+	<!-- remaining content -->  
+	<container>
+		<!-- items arranged from top to bottom, item at top fills remaining space -->
+		<layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="0"/>
+
+		<!-- items stretched to fit width of container -->
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" layout_children="true"/>
+			
+		<container id="mpnl">
+			
+			<!-- all children fit to all sides -->
+			<layout class="stick_to_sides_attachment" alignment="all" layout_children="true" inset="0"/>
+				
+			<widget class="mpmp" title="Pre Match" id="mpmp"/>
+
+			<container class="titled_box" title="Overview" id="bmin">
+				<layout class="stick_to_sides_attachment" alignment="all" layout_children="true" inset="0"/>					
+				<widget class="bmin" title="Overview" id="bmin"/>
+			</container>
+
+
+			<container class="titled_box" title="Match Stats" id="mtst">
+				<layout class="stick_to_sides_attachment" alignment="all" layout_children="true" inset="0"/>					
+				<widget class="mtst" id="mtst"/>
+			</container>
+
+			<widget class="mazp" title="Action Zones" id="mazp"><colour id="ptlc" name="white"/></widget>
+				
+				
+			<container class="titled_box" title="Pitch" id="hilg">
+				<layout class="stick_to_sides_attachment" alignment="all" layout_children="true" inset="0"/>					
+				<widget class="hilg" title="Pitch" id="hilg"/>
+			</container>
+				
+				
+			<container class="titled_box" title="Report" id="mtrp">
+				<layout class="stick_to_sides_attachment" alignment="all" layout_children="true" inset="0"/>					
+				<widget class="mtrp" title="Report" id="mtrp"/>
+			</container>
+				
+			<widget class="hfms" title="Home Stats" id="hfms"/>							
+			<widget class="afms" title="Away Stats" id="afms"/>							
+			<widget class="bmts" title="Player Ratings" id="bmts"/>	
+			<widget class="both_match_formation_panels" title="Formations[COMMENT - match screen; formations panel title]" id="bmfs"/>
+			<widget class="mlsp" title="Latest Scores" id="mlsp"/>			
+			<widget class="mgup" title="Goal Updates" id="mgup"/>
+				
+			<container class="titled_box" title="League Table" id="mltp">
+				<layout class="stick_to_sides_attachment" alignment="all" layout_children="true" inset="0"/>					
+				<widget class="mltp" title="League Table" id="mltp"/>
+			</container>
+				
+			<widget class="mpst" title="Post Match" id="mpst"/>
+				
+			<container title="Dual Panel" id="mpdl" late_loading="true">
+				<layout class="arrange_horizontal_attachment" layout="-1,-1" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" layout_children="true" inset="0"/>
+
+				<container class="multi_box" id="mpll" contents_kind="bordered_box" top_kind="subtle_popup" default_item="bmin" save_current_state="true" save_default_state="true">
+					<integer id="right_embed_inset" value="5"/>
+					<integer id="top_embed_inset" value="3"/>
+					<record id="top_properties" auto_size="horizontal">
+						<boolean id="fixed" value="false"/>
+						<flags id="spec" value="title,small"/>
+						<colour name="selection"/>
+					</record>
+					<flags id="view_kind" value="embedded_view_popup_button"/>
+
+					
+					<widget class="bmin" title="Overview" id="bmin" file="match overview small" small_version="true"/>
+					<widget class="mtst" title="Match Stats" id="mtst"/>
+					<widget class="mazp" title="Action Zones" id="mazp" file="match action zones small"><colour id="ptlc" name="white"/></widget>
+					<widget class="hilg" title="Pitch" id="hilg" file="match highlights small"/>
+					<widget class="mtrp" title="Report" id="mtrp" file="match report small"/>
+					
+					<container class="scrolling_box" title="Home Team Ratings" id="hfms">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+						<widget class="hmst"/>
+					</container>
+					
+					<container class="scrolling_box" title="Away Team Ratings"   id="afms">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+						<widget class="amst"/>
+					</container>
+					<widget class="mlsp" title="Latest Scores" id="mlsp" MLSs="true" file="match latest scores small"/>
+					<widget class="mgup" title="Goal Updates" id="mgup" MGUs="true" file="match goal update small"/>
+					<widget class="mltp" title="League Table" id="mltp" MLTs="true"/>
+					<widget class="match_formation_panel" id="hmtt" team_index="0" read_only="true" title="Tactics"/>	<!-- read only match tactics -->
+					<widget class="match_formation_panel" id="amtt" team_index="1" read_only="true" title="Tactics"/>	<!-- read only match tactics -->
+					<widget class="match_tactic_panel" id="emtt" title="Tactics"/>	<!-- editable match tactics -->
+					<widget class="match_debug_panel" id="mtdb" title="Debug"/>
+					<widget class="match_controller_panel" id="mctr" title="Controller[COMMENT - debug only]"/>
+				</container>
+
+				<container class="multi_box" id="mplr" contents_kind="bordered_box" top_kind="subtle_popup" default_item="mtst" save_current_state="true" save_default_state="true">
+
+					<integer id="right_embed_inset" value="5"/>
+					<integer id="top_embed_inset" value="3"/>
+					<record id="top_properties" auto_size="horizontal">
+						<boolean id="fixed" value="false"/>
+						<flags id="spec" value="title,small"/>
+						<colour name="selection"/>
+					</record>
+					
+					<flags id="view_kind" value="embedded_view_popup_button"/>
+
+					<widget class="bmin" title="Overview" id="bmin" file="match overview small" small_version="true"/>
+					<widget class="mtst" title="Match Stats" id="mtst"/>
+					<widget class="mazp" title="Action Zones" id="mazp"  file="match action zones small"><colour id="ptlc" name="white"/></widget>
+					<widget class="hilg" title="Pitch" id="hilg" file="match highlights small"/>
+					<widget class="mtrp" title="Report" id="mtrp" file="match report small"/>
+					<container class="scrolling_box" title="Home Team Ratings"  id="hfms">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+						<widget class="hmst"/>
+					</container>
+					<container class="scrolling_box" title="Away Team Ratings" id="afms">
+						<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+						<widget class="amst"/>
+					</container>
+					<widget class="mlsp" title="Latest Scores" id="mlsp" MLSs="true" file="match latest scores small"/>
+					<widget class="mgup" title="Goal Updates" id="mgup" MGUs="true" file="match goal update small"/>
+					<widget class="mltp" title="League Table" id="mltp" MLTs="true"/>
+					<widget class="match_formation_panel" id="hmtt" team_index="0" read_only="true" title="Tactics"/>	<!-- read only match tactics -->
+					<widget class="match_formation_panel" id="amtt" team_index="1" read_only="true" title="Tactics"/>	<!-- read only match tactics -->
+					<widget class="match_tactic_panel" id="emtt" title="Tactics"/>	<!-- editable match tactics -->
+					<widget class="match_debug_panel" id="mtdb" title="Debug"/>
+					<widget class="match_controller_panel" id="mctr" title="Controller[COMMENT - debug only]"/>
+				</container>
+							
+			</container>
+		</container>
+
+		<!-- COMMENTARY -->
+		<container id="cmif">
+			<flags id="styl" value="no_border, darkened"/>
+			<integer id="heig" value="52"/>
+	
+			<container id="cmpc" tran="1">
+				<flags id="styl" value="thin_border"/>
+	
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	
+				<widget class="picture" file="match/commentary/bar" id="cmbi" auto_size="vertical" rthr="85">
+					<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>				
+				</widget>
+	
+				<!-- commentary widget -->
+				<widget class="label" id="cmnt">
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="top" inset="11"/>
+	
+					<string id="text" value=""/>
+					<integer id="size" value="12"/>
+					<flags id="algn" value="centre"/>
+					<colour name="white"/>
+				</widget>
+				
+				<widget class="possession_bar" id="ls5m" rthr="85">
+					<string id="text" value="Last 5 Mins"/>
+					<integer id="maxv" value="100"/>
+					<integer id="gap " value="40"/>
+					<integer id="inse" value="80"/>
+					
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="15"/>
+					<layout class="stick_to_sides_attachment" alignment="top" inset="11"/>
+				</widget>
+				
+			</container>
+						
+			
+		</container>
+		
+	</container>
+</screen>

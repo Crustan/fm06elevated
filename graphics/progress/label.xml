@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertylist SYSTEM "http://www.sigames.com/dtds/propertylist.dtd">
+
+<properties version="1.0">
+	<integer id="mode" value="1"/>
+	<flags id="styl" value="no_border"/>
+	<real id="tran" value="0.0"/>
+	<colour red="255" green="255" blue="255"/>
+</properties>

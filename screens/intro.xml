@@ -1,0 +1,78 @@
+<screen version="1.0" >
+
+	<!-- this container will display the intro screen logo -->
+	<container>
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		
+		<widget class="picture" id="losg" file="setup/logo" auto_size="all" transparency="1.0">
+        	<layout class="centre_in_parent_attachment" alignment="vertical" offset="-100" priority="1"/>
+			<layout class="centre_in_parent_attachment" alignment="horizontal" priority="1"/>
+			<string id="hint" value="Does your wife know about Susie yet?"/>
+    	</widget>
+	
+	</container>
+	
+    <!-- play -->
+    <widget class="action_button" id="ibng" appearance="setup/new_game" click_event="NEW " auto_size="all">
+        <layout class="stick_to_sides_attachment" alignment="bottom" inset="150"/>
+		<layout class="stick_to_sides_attachment" alignment="right" inset="720"/>
+        <string id="hint" value="Choose this option to start a new game."/>
+    </widget>
+
+    <!-- resume -->
+    <widget class="action_button" id="resb" appearance="setup/resume_game" click_event="resu" auto_size="all">
+        <layout class="stick_to_sides_attachment" alignment="bottom" inset="150"/>
+		<layout class="stick_to_sides_attachment" alignment="right" inset="620"/>
+        <string id="hint" value="Choose this option to load the game you played last ('[%string#1 - name of game goes here]')."/>
+    </widget>
+
+     <!-- load -->
+    <widget class="action_button" id="iblo" appearance="setup/load_game" click_event="OPN?" auto_size="all">
+        <layout class="stick_to_sides_attachment" alignment="bottom" inset="150"/>
+		<layout class="stick_to_sides_attachment" alignment="right" inset="520"/>
+        <string id="hint" value="Load a previously saved game."/>
+    </widget>
+
+	<!-- quick start -->
+    <widget class="action_button" id="ibqs" appearance="setup/quickstart" click_event="LQS?" auto_size="all">
+        <layout class="stick_to_sides_attachment" alignment="bottom" inset="150"/>
+		<layout class="stick_to_sides_attachment" alignment="right" inset="420"/>
+        <string id="hint" value="Load a quick start."/>
+    </widget>
+
+	<!-- network -->
+	<widget class="action_button" id="ibjo" appearance="setup/network" click_event="join" auto_size="all">
+        <layout class="stick_to_sides_attachment" alignment="bottom" inset="150"/>
+		<layout class="stick_to_sides_attachment" alignment="right" inset="320"/>
+		<string id="hint" value="Susie caught you playing with yourself. Be a real man(ager) - playFM.co.uk."/>
+	</widget>
+
+	<!-- view match -->
+    <widget class="action_button" id="ibvm" appearance="setup/view_match" click_event="PLSM" auto_size="all">
+        <layout class="stick_to_sides_attachment" alignment="bottom" inset="150"/>
+		<layout class="stick_to_sides_attachment" alignment="right" inset="220"/>
+        <string id="hint" value="Choose this option to watch a previously saved match."/>
+    </widget>
+	
+	<!-- preferences -->
+	<widget class="action_button" id="ibpr" appearance="setup/preferences" auto_size="all" click_event="PREF">
+        <layout class="stick_to_sides_attachment" alignment="bottom" inset="150"/>
+		<layout class="stick_to_sides_attachment" alignment="right" inset="120"/>
+		<!-- <string id="hint" value="Click here to see the people behind FM 2005."/> -->
+	</widget>
+
+	<!-- check for update -->
+	<widget class="action_button" id="chup" appearance="setup/updates" auto_size="all" click_event="CHUP">
+        <layout class="stick_to_sides_attachment" alignment="bottom" inset="150"/>
+		<layout class="stick_to_sides_attachment" alignment="right" inset="20"/>
+		<string id="hint" value="Choose this option to make sure you have the latest version. Or you can just go to sortitoutsi.net and grab all the latest files, skins and graphics![COMMENT - hint text for button which checks for new patches]"/>
+	</widget>
+
+    <!-- quit -->
+	<widget class="action_button" id="quit" appearance="setup/exit" auto_size="all" click_event="QUIT">
+        <layout class="stick_to_sides_attachment" alignment="bottom" inset="20"/>
+		<layout class="stick_to_sides_attachment" alignment="right" inset="15"/>
+		<string id="hint" value="Choose this option to exit FM 2006 and return to the real world...[COMMENT - hint text for button to exit game]"/>
+	</widget>
+
+</screen>

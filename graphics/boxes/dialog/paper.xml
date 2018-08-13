@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertylist SYSTEM "http://www.sigames.com/dtds/sios/properties.dtd">
+
+<!-- image properties -->
+<properties>
+
+	<!-- DIALOG BOX appearance - like a titled box, but with a different look for dialog boxes				
+	-->
+
+	<!-- image borders -->
+	<!-- these determine how many pixels any content is inset from each side of the box -->
+
+	<integer id="left_border" value="12"/>
+	<integer id="top_border" value="36"/>
+	<integer id="right_border" value="18"/>
+	<integer id="bottom_border" value="18"/>
+
+	<!-- title insets -->
+	<!-- these determine how many pixels the title is inset from the top/left/right of the box -->
+	<integer id="title_horizontal_inset" value="8"/>
+	<integer id="title_vertical_inset" value="8"/>
+	<integer id="title_text_inset" value="2"/>
+	
+</properties>

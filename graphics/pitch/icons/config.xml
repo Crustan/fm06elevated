@@ -1,0 +1,7 @@
+<record>
+	<!-- resource manager options -->
+
+	<!-- preload & cache these, to make pit setup quick -->
+	<boolean id="preload" value="true"/>
+	<boolean id="cache" value="true"/>
+</record>

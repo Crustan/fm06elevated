@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertylist SYSTEM "http://www.sigames.com/dtds/properties.dtd">
+
+<properties version="1.0">
+	<!-- standard colours used throughout the game -->
+	
+	<!-- misc "special" colours -->
+	<colour name="selection" red="255" green="204" blue="0"/>
+	<colour name="hilight" red="35" green="127" blue="88"/>
+	<colour name="background" red="0" green="0" blue="0"/>
+	<colour name="disabled" red="255" green="255" blue="255" alpha="128"/>
+	<colour name="transparent" red="0" green="0" blue="0" alpha="0" />
+	<colour name="hyperlink" red="255" green="255" blue="255" />
+
+	<!-- default text colours -->
+	<colour name="menu" red="255" green="255" blue="255"/>
+	<colour name="menu selected" red="255" green="204" blue="0"/>
+	<colour name="control" red="255" green="255" blue="255"/>
+	<colour name="text" red="255" green="255" blue="255"/>
+	<colour name="hint" red="255" green="255" blue="255"/>
+	<colour name="title" red="255" green="255" blue="255" />
+	<colour name="html" red="255" green="255" blue="255" />
+	<colour name="html_hyperlink" red="255" green="192" blue="20" />
+
+	<!-- actual colours -->
+	<colour name="black" red="0" green="0" blue="0" />
+	<colour name="white" red="255" green="255" blue="255" />
+	
+	<!-- greys -->
+	<colour name="grey" red="150" green="150" blue="150" />
+	<colour name="grey1" red="128" green="128" blue="128" />
+	<colour name="grey2" red="112" green="112" blue="144" />
+	<colour name="grey3" red="48" green="48" blue="48" />
+	<colour name="grey4" red="64" green="64" blue="64" />
+	<colour name="grey5" red="200" green="200" blue="200" />
+	<colour name="grey6" red="226" green="226" blue="228" />
+	
+	<!-- reds -->
+	<colour name="red" red="255" green="0" blue="0" />
+	<colour name="red1" red="224" green="0" blue="0" />
+	<colour name="red2" red="176" green="0" blue="0" />
+	<colour name="red3" red="144" green="16" blue="0" />
+	<colour name="red4" red="255" green="50" blue="50"/>
+	
+	<!-- oranges -->
+	<colour name="orange" red="255" green="153" blue="0" />
+	<colour name="orange1" red="255" green="112" blue="0" />
+	<colour name="orange2" red="224" green="128" blue="0" />
+	<colour name="orange3" red="200" green="150" blue="0" />
+	
+	<!-- yellows -->
+	<colour name="yellow" red="255" green="255" blue="0"/>
+	<colour name="yellow1" red="255" green="240" blue="0" />
+	<colour name="yellow2" red="255" green="208" blue="0" />
+	<colour name="yellow3" red="255" green="192" blue="0" />
+	<colour name="yellow4" red="200" green="200" blue="0" />
+	
+	<!-- greens -->
+	<colour name="green" red="0" green="255" blue="0" />	
+	<colour name="green1" red="0" green="128" blue="48" />
+	<colour name="green2" red="0" green="96" blue="48" />
+	<colour name="green3" red="0" green="200" blue="0" />
+	
+	<!-- blues -->
+	<colour name="blue" red="0" green="0" blue="255" />
+	<colour name="blue1" red="0" green="32" blue="96" />
+	<colour name="blue2" red="0" green="32" blue="128" />
+	<colour name="blue3" red="0" green="48" blue="160" />
+	<colour name="blue4" red="0" green="80" blue="208" />
+	<colour name="blue5" red="96" green="192" blue="255" />
+	<colour name="blue6" red="0" green="16" blue="64" />
+	<colour name="blue7" red="16" green="32" blue="96" />
+	
+	<!-- cyans -->
+	<colour name="cyan" red="0" green="255" blue="255"/>
+	<colour name="cyan1" red="150" green="200" blue="255"/>
+	
+	<!-- purples -->
+	<colour name="purple" red="255" green="0" blue="255" />
+	<colour name="purple1" red="128" green="0" blue="64" />
+	<colour name="purple2" red="96" green="0" blue="96" />
+	<colour name="purple3" red="128" green="0" blue="32" />
+	
+	<!-- browns -->
+	<colour name="brown1" red="128" green="64" blue="0" />
+	<colour name="brown2" red="160" green="80" blue="0" />
+	<colour name="brown3" red="64" green="16" blue="0" />
+	
+	<!-- other -->
+	<colour name="pink" red="255" green="149" blue="149" />
+	<colour name="gold" red="217" green="177" blue="40" />
+	
+	<!-- HTML -->
+	<colour name="html_green" red="0x00" green="0x80" blue="0x00" />
+	<colour name="html_lime" red="0x00" green="0xFF" blue="0x00" />
+	<colour name="html_teal" red="0x00" green="0x80" blue="0x80" />
+	<colour name="html_aqua" red="0x00" green="0xFF" blue="0xFF" />
+	<colour name="html_navy" red="0x00" green="0x00" blue="0x80" />
+	<colour name="html_blue" red="0x00" green="0x00" blue="0xFF" />
+	<colour name="html_purple" red="0x80" green="0x00" blue="0x80" />
+	<colour name="html_fushsia" red="0xFF" green="0x00" blue="0xFF" />
+	<colour name="html_maroon" red="0x80" green="0x00" blue="0x00" />
+	<colour name="html_red" red="0xFF" green="0x00" blue="0x00" />
+	<colour name="html_olive" red="0x80" green="0x80" blue="0x00" />
+	<colour name="html_yellow" red="0xFF" green="0xFF" blue="0x00" />
+	<colour name="html_white" red="0xFF" green="0xFF" blue="0xFF" />
+	<colour name="html_silver" red="0xC0" green="0xC0" blue="0xC0" />
+	<colour name="html_gray" red="0x80" green="0x80" blue="0x80" />
+	<colour name="html_black" red="0x00" green="0x00" blue="0x00" />
+	<colour name="html_heading" red="255" green="255" blue="0" />
+	
+	
+</properties>

@@ -1,0 +1,9 @@
+<record>
+	<!-- resource manager options -->
+
+	<!-- dont preload anything in this folder -->
+	<boolean id="preload" value="false"/>
+
+	<!-- turn on auto mapping -->
+	<boolean id="amap" value="true"/>
+</record>

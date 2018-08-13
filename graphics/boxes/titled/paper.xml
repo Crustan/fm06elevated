@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertylist SYSTEM "http://www.sigames.com/dtds/sios/properties.dtd">
+
+<!-- image properties -->
+<properties>
+
+	<!-- TITLED BOX appearance - this is intended to be a box with borders of some sort
+								 which also has a title drawn into it
+								 
+								 the titled box can also have an optional overlay
+								 appearance which is drawn on top of this one, everywhere
+								 except where the title is drawn; you can use this to
+								 add adornments to the bordered region without them
+								 cluttering up the title and making it unreadable
+								 
+								 to use the overlay appearance, just add a set of
+								 graphics called "appearance_top_left..." etc,
+								 and an XML file called "appearance.xml"
+				
+	-->
+
+	<!-- image borders -->
+	<!-- these determine how many pixels any content is inset from each side of the box -->
+
+	<integer id="left_border" value="12"/>
+	<integer id="top_border" value="32"/>
+	<integer id="right_border" value="14"/>
+	<integer id="bottom_border" value="14"/>
+
+	<!-- title insets -->
+	<!-- these determine how many pixels the title is inset from the top/left/right of the box -->
+	<integer id="title_horizontal_inset" value="15"/>
+	<integer id="title_vertical_inset" value="6"/>
+	<integer id="title_text_inset" value="2"/>
+</properties>

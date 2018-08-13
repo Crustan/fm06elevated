@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertylist SYSTEM "http://www.sigames.com/dtds/sios/properties.dtd">
+
+<!-- image properties -->
+<properties>
+
+	<!-- COLLAPSABLE BOX appearance - 	this is like a titled box, except that it
+										can also be collapsed down into a compact form
+										where only the border is visible
+	-->
+
+	<!-- image borders -->
+	<!-- these determine how many pixels any content is inset from each side of the box -->
+
+	<integer id="left_border" value="2"/>
+	<integer id="top_border" value="20"/>
+	<integer id="right_border" value="2"/>
+	<integer id="bottom_border" value="2"/>
+	
+	<!-- title insets -->
+	<!-- these determine how many pixels the title is inset from the top/left/right of the box -->
+	<integer id="title_horizontal_inset" value="8"/>
+	<integer id="title_vertical_inset" value="2"/>
+	<integer id="title_text_inset" value="2"/>
+	
+</properties>

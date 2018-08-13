@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertylist SYSTEM "http://www.sigames.com/dtds/sios/properties.dtd">
+
+<!-- image properties -->
+<properties>
+	
+	<!-- PLAIN BOX appearance - this is intended to be a box without any borders
+								typically the appearance will just apply a slight
+								wash to lighten/darken the area it covers
+	-->
+	
+	<!-- image borders -->
+	<!-- these determine how many pixels any content is inset from each side of the image -->
+	<integer id="left_border" value="2"/>
+	<integer id="top_border" value="2"/>
+	<integer id="right_border" value="2"/>
+	<integer id="bottom_border" value="2"/>
+	
+</properties>

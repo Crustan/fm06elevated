@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertylist SYSTEM "http://www.sigames.com/dtds/sios/properties.dtd">
+
+<!-- image properties -->
+<properties>
+
+	<!-- image borders -->
+	<!-- these determine how many pixels any content is inset from each side of the image -->
+	<!-- (for example, in the case of a button, the content would be the text label) -->
+	<integer id="left_border" value="4"/>
+	<integer id="top_border" value="4"/>
+	<integer id="right_border" value="4"/>
+	<integer id="bottom_border" value="2"/>
+	
+	<!-- table properties -->
+	
+	<!-- this property determines how far in from the right of a table to
+	     inset all of its content - which can be useful if the graphics for
+	     the table headings have large bevelled ends -->
+	     
+	<integer id="last_column_inset" value="0"/>
+</properties>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertylist SYSTEM "http://www.sigames.com/dtds/properties.dtd">
+
+<properties version="1.0">
+	
+	<!-- profile attribute colours -->
+	<colour name="low attribute" red="180" green="180" blue="0"/>
+	<colour name="normal attribute" red="187" green="29" blue="3"/>
+	<colour name="good attribute" red="215" green="125" blue="8"/>
+	<colour name="excellent attribute" red="254" green="221" blue="109"/>
+	<colour name="special attribute" red="255" green="160" blue="0" />
+	<colour name="attribute label" red="255" green="255" blue="255" />	
+	<colour name="special attribute label" red="255" green="255" blue="255" />	
+	<colour name="profile extra text" red="150" green="200" blue="255" />
+
+	<!-- attribute graph colours -->
+	<colour name="graph line 1" red="255" green="255" blue="0" />	
+	<colour name="graph line 2" red="150" green="200" blue="255" />
+	<colour name="graph line 3" red="0" green="255" blue="0" />		
+	<colour name="graph line 4" red="200" green="0" blue="200" />	
+	<colour name="graph line 5" red="255" green="0" blue="0" />	
+	<colour name="graph line 6" red="255" green="160" blue="0" />	
+	
+	<!-- (additional) stats colours -->
+	<colour name="low stat" red="180" green="180" blue="0"/>
+	<colour name="medium stat" red="220" green="220" blue="0" />
+	<colour name="good stat" red="255" green="204" blue="0" />
+	<colour name="excellent stat" red="255" green="160" blue="0" />
+
+	<!-- player colours -->
+	<colour name="virtual player" red="255" green="255" blue="255" alpha="100"/><!-- virtual player -->
+	<colour name="loan out" red="153" green="204" blue="255" alpha="100"/>	<!-- on loan to other club -->
+	<colour name="loan in" red="153" green="204" blue="255"/>				<!-- on loan from other club -->
+	<colour name="co own in" red="255" green="204" blue="51"/>				<!-- co owned at club -->
+	<colour name="co own out" red="255" green="204" blue="51" alpha="100"/>	<!-- co owned not at club -->
+	<colour name="trial in" red="102" green="255" blue="102"/>				<!-- on trial at this club -->
+	<colour name="trial out" red="102" green="255" blue="102" alpha="100"/>	<!-- on trial at other club -->
+	<colour name="shortlisted" red="255" green="255" blue="100"/>			<!-- shortlisted -->
+	
+	<!-- statistic colours -->
+	<colour name="yellow card" red="240" green="240" blue="0"/>				<!-- yellow card -->
+	<colour name="red card" red="255" green="50" blue="50"/>				<!-- red card -->
+	<colour name="average rating" red="255" green="160" blue="0"/>			<!-- average rating -->
+
+	<!-- team fixtures panel colours -->
+	<colour name="potential fixture" red="255" green="240" blue="0"/>			<!-- row on table showing a possible future fixture date -->
+	<colour name="draw date" red="123" green="174" blue="225"/>				 	<!-- row on table showing the draw date of a stage -->
+	<colour name="selected for friendly" red="0" green="255" blue="0"/>	 		<!-- row on table showing a selected friendly date -->
+	<colour name="unavailable friendly date" red="255" green="255" blue="255" alpha="100"/>	<!-- row on table showing an unavailable friendly date -->
+	<colour name="available friendly date" red="255" green="255" blue="0"/>		<!-- row on table showing an available friendly date -->
+	
+    <!-- fixture colours -->
+	<colour name="result score" red="255" green="255" blue="255"/>		     <!-- fixture basic score -->
+	<colour name="result aggregate" red="255" green="255" blue="255" alpha="150"/>		 <!-- fixture aggregate score -->
+	<colour name="position" red="255" green="255" blue="255"/>		         <!-- team league position -->
+ 	<colour name="loser" red="255" green="255" blue="255" alpha="100"/>      <!-- colour for losing team -->
+ 	<colour name="competition" red="255" green="255" blue="255"/>		     <!-- colour for 3-letter competition name -->
+    <colour name="nation" red="255" green="255" blue="255"/>		         <!-- colour for 3-letter nation name -->
+	<colour name="fixture score separator" red="255" green="255" blue="255"/><!-- colour for : or - score separator -->
+	<colour name="fixture outcome" red="255" green="255" blue="0"/>			 <!-- colour for pen/extra time indicator -->
+	<colour name="fixture tv" red="255" green="255" blue="255"/>			 <!-- 'tv' label for TV matches -->
+	<colour name="league position" red="255" green="204" blue="51" />
+	
+   <!-- game status colours -->
+ 	<colour name="user playing" red="200" green="255" blue="200"/>		     <!-- user is playing the game -->
+ 	<colour name="user waiting" red="255" green="200" blue="200"/>		     <!-- user is waiting -->
+	
+	<!-- special colours -->
+	<colour name="match incident" red="255" green="255" blue="255"/>		<!-- incident -->
+	<colour name="match goal" red="153" green="204" blue="255"/>			<!-- goal -->
+	<colour name="match own goal" red="255" green="191" blue="180"/>		<!-- own goal -->
+	<colour name="match penalty" red="255" green="255" blue="255"/>			<!-- penalty -->
+	<colour name="match missed penalty" red="180" green="180" blue="180"/>	<!-- missed penalty -->
+	<colour name="match yellow card" red="240" green="240" blue="0"/>		<!-- yellow card -->
+	<colour name="match red card" red="255" green="50" blue="50"/>			<!-- red card -->
+	<colour name="match injury" red="255" green="204" blue="0"/> 			<!-- injury -->
+	<colour name="match man of match" red="153" green="204" blue="255"/> 	<!-- man of match -->
+	<colour name="match substitute" red="255" green="255" blue="255" alpha="100"/><!-- substitute -->
+   
+   <!-- misc -->
+    <colour name="divider" red="255" green="255" blue="255" alpha="255"/>		         <!-- used for various dividing lines in tables -->
+ 	<colour name="default foreground" red="255" green="255" blue="255"/>	 <!-- default screen foreground colour -->
+ 	<colour name="default background" red="50" green="102" blue="151"/>	 	 <!-- default screen background colour -->
+ 	<colour name="default outline" red="0" green="0" blue="0"/>		 		 <!-- default screen outline colour -->
+ 	<colour name="graph team 1" red="255" green="255" blue="0"/>		     <!-- team 1 colour on graph -->
+ 	<colour name="graph team 2" red="0" green="255" blue="0"/>		     	 <!-- team 2 colour on graph -->
+ 	<colour name="medical main" red="255" green="255" blue="255"/>		     <!-- medical main colour for pitch -->
+ 	<colour name="medical minor" red="0" green="180" blue="0"/>		         <!-- medical trim colour for pitch -->
+ 	<colour name="medical text" red="0" green="180" blue="0"/>		         <!-- medical text colour for pitch -->
+ 	<colour name="neutral commentary foreground" red="255" green="255" blue="255"/>		     <!-- foreground colour for neutral commentary -->
+ 	<colour name="neutral commentary background" red="50" green="102" blue="151"/>		     <!-- background colour for neutral commentary -->
+ 	<colour name="match stats" red="200" green="200" blue="200"/>		     <!-- match stats colour -->
+ 	<colour name="squad number" red="200" green="200" blue="200"/>		     <!-- team stats squad number colour -->
+	<colour name="human controlled" red="255" green="240" blue="0" />		<!-- colour used to indicate that team is managed by a human player -->
+	<colour name="news ticker" red="255" green="255" blue="255" />			<!-- News Ticker -->
+	
+	<!-- training stacked bar chart colours -->
+	<colour name="intensive training" red="255" green="120" blue="0" />		<!-- used to show number of players on intensive training -->
+	<colour name="high training" red="255" green="160" blue="0" />			<!-- used to show number of players on high training -->
+	<colour name="medium training" red="255" green="200" blue="0" />			<!-- used to show number of players on medium training -->
+	<colour name="light training" red="255" green="255" blue="0" />			<!-- used to show number of players on light training -->
+	
+	<colour name="bar value" red="71" green="107" blue="71"/>					<!-- percentage bar fill colour -->
+	<colour name="bar filler" red="71" green="107" blue="71"/>					<!-- percentage bar filler colour -->
+	
+	<colour name="player comparison left" red="0" green="32" blue="96" />		<!-- player comparison: left player bar colour -->
+	<colour name="player comparison right" red="180" green="180" blue="180" />	<!-- player comparison: right player bar colour -->
+	
+	<colour name="profile bar value" red="71" green="107" blue="71" />			<!-- percentage bar fill colour -->
+	<colour name="profile bar filler" red="71" green="107" blue="71" />			<!-- percentage bar filler colour -->
+	
+</properties>

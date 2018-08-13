@@ -1,0 +1,198 @@
+<panel id="mtct">
+
+	<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+	<layout class="fit_children_attachment" alignment="vertical, fill" offset="0"/>
+
+	<layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+	
+	<!-- normal controls, not shown in highlight mode-->
+	<container id="nmcn">
+		
+		<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="8"/>
+		<layout class="fit_children_attachment" alignment="vertical,fill" offset="0" gap="8"/>
+		
+		<!-- player buttons -->
+		<container>
+		
+			<layout class="arrange_horizontal_attachment" alignment="left,fill" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" layout_children="true" inset="0"/>
+
+			<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10"/>
+
+			<widget class="action_button_blue" id="play" text="Play" auto_size="vertical" spec="text,small" click_event="play"/>
+			<widget class="action_button_blue" text="Save" id="svmt" auto_size="vertical" spec="text,small" click_event="svmt"/>
+		</container>
+		
+		<!-- highlights etc -->
+		<container id="spcn">
+		
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true" inset="0"/>
+
+			<layout class="fit_children_attachment" alignment="vertical, fill" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10"/>
+			
+			<container id="mtcw">
+				<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0"/>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="top" layout_children="true" inset="0"/>
+				
+				<widget class="text" text="Match[text speed control on match screen]" auto_size="all" spec="text,small" alignment="right"/>
+				<widget class="slider_horizontal_blue" id="mtsp" width="75" height="20" max_value="5" min_value="1" value="1" notch_frequency="1" draw_notches="false"  draw_middle_notch="true" fnce="sped"/>
+			</container>
+			
+			<!-- hilights speed container -->
+
+			<container id="2dsc">
+				<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0"/>
+				<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="top" layout_children="true" inset="0"/>
+				
+				<widget class="text" text="2D" auto_size="all" spec="text,small" alignment="right"/>
+				<widget class="slider_horizontal_blue" id="2dsp" width="75" height="20" max_value="5" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" fnce="2dsp"/>
+			</container>
+
+		</container>
+		
+		<widget id="tccn" class="modal_menu" auto_size="vertical" select_event="tacm">
+		    <flags id="appearance" value="actions"/>
+			<flags id="spec" value="text,small"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+			
+			<list id="items">
+
+				<record id="rpmn" text="Replays[COMMENT - match screen; replays popup menu on side panel]">
+					<list id="items">
+						<record id="RMno" text="None[COMMENT - match screen; option in replays menu for no replays to be shown]" tkex="true"/>
+						<record id="RMgl" text="Goals[COMMENT - match screen; option in replays menu for goal replays to be shown]" tkex="true"/>
+						<record id="RMhl" text="Highlights[COMMENT - match screen; option in replays menu for replays to be shown of highlights]" tkex="true"/>
+					</list>
+				</record>
+			
+				<record id="hlht" text="Highlight Mode">
+					<list id="items">
+						<record id="HMfm" name="Full Match" tkex="true"/>
+						<record id="HMex" name="Extended" tkex="true"/>
+						<record id="HMky" name="Key" tkex="true"/>
+						<record id="HMoc" name="Only Commentary" tkex="true"/>
+					</list>
+				</record>
+
+				<record id="hlmd" text="Show Highlights In">
+					<list id="items">
+						<record id="SHfs" name="Full Screen" tkex="true"/>
+						<record id="SHlf" name="Left - Split View" tkex="true"/>
+						<record id="SHrt" name="Right - Split View" tkex="true"/>
+					</list>
+				</record>
+
+			
+				<record id="htac" text="Home"/>		<!-- tactics button -->
+				<record id="htam" text="Home">		<!-- tactics menu -->
+					<list id="items">
+						<record id="hfor" name="Quick[COMMENT - tactics option on match screen for applying changes during a match]" hint="Change formation, team and player instructions during the match[COMMENT - hint for match screen 'basic' tactics option]"/>
+						<record id="htac" name="Detailed[COMMENT - detailed tactics option on match screen]" hint="Got a pair of tits up front? So does Susie[COMMENT - hint for match screen 'advanced' tactics option]"/>
+					</list>
+				</record>
+				<record id="atac" text="Away"/>		<!-- tactics button -->
+				<record id="atam" text="Away">		<!-- tactics menu -->
+					<list id="items">
+						<record id="afor" name="Quick[COMMENT - tactics option on match screen for applying changes during a match]" hint="Change formation, team and player instructions during the match[COMMENT - hint for match screen 'basic' tactics option]"/>
+						<record id="atac" name="Detailed[COMMENT - detailed tactics option on match screen]" hint="Got a pair of tits up front? So does susie[COMMENT - hint for match screen 'advanced' tactics option]"/>
+					</list>
+				</record>
+			</list>
+		</widget>
+							
+		<!-- view highlights menu-->
+		<container id="vhcn">
+			<layout class="stick_to_sides_attachment" alignment="top,horizontal" layout_children="true" inset="0"/>
+			<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10"/>
+
+			<widget class="popup_button_blue" text="View Highlights" fixed="true" id="vhhl" select_event="vhhl" auto_size="vertical">
+				<list id="items">
+					<record id="4" name="Goals"/>		<!--MHT_GOALS-->
+					<record id="2" name="Key"/>			<!--MHT_KEY-->
+					<record id="1" name="Extended"/>	<!--MHT_EXTENDED-->
+				</list>
+			</widget>
+		</container>
+		
+	</container>
+
+	<!-- tactic controls-->
+	<container id="ttcn" hidden="true">
+
+		<layout class="arrange_vertical_attachment" alignment="top"/>
+
+		<layout class="fit_children_attachment" alignment="vertical, fill" layout_children="true"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true" inset="0"/>
+
+		<layout class="fit_children_attachment" alignment="vertical, fill"/>
+
+		<!-- box containing buttons -->		
+		<container>
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true" inset="0"/>
+			
+			<widget class="action_button_blue" id="aptt" text="Apply Tactics[COMMENT - match screen menu option; applies any tactical changes to the match]" auto_size="vertical" click_event="aptt"/>
+			<widget class="action_button_blue" id="cntt" text="Cancel Tactics[COMMENT - match screen menu option; cancels any tactical changes to the match]" auto_size="vertical" click_event="cntt"/>
+		</container>
+	</container>
+		
+	<!-- highlight controls-->
+	<container id="hlcn" hidden="true">
+		
+		<layout class="arrange_vertical_attachment" alignment="top"/>
+
+		<layout class="fit_children_attachment" alignment="vertical, fill" layout_children="true"/>
+		<layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true" inset="10"/>
+
+		<layout class="fit_children_attachment" alignment="vertical, fill"/>
+		
+		<!-- play button -->
+		<container>
+		
+			<layout class="arrange_horizontal_attachment" alignment="left,fill" offset="0" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" layout_children="true" inset="0"/>
+
+			<widget class="action_button_blue" id="play" text="Play[Want to learn better ball control? Girls head to Susie!]" auto_size="vertical" spec="text, small" click_event="play"/>
+		</container>
+		
+		<!-- hilights speed container -->
+		<container id="hspc">
+		
+			<layout class="arrange_vertical_attachment" alignment="top"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true" inset="2"/>
+			
+			<container>
+				<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0"/>
+				<layout class="fit_children_attachment" alignment="vertical"/>
+				<layout class="stick_to_sides_attachment" alignment="top" layout_children="true" inset="0"/>
+				
+				<widget class="text" text="2D" auto_size="all" alignment="right" spec="text,small"/>
+				<widget class="slider_horizontal_blue" id="hspd" height="16" width="90" max_value="5" min_value="1" value="1" notch_frequency="1" draw_notches="false" draw_middle_notch="true" fnce="hspd"/>
+			</container>
+
+		</container>
+		
+		<!-- other buttons -->
+		<container>
+		
+			<layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true" inset="0"/>
+
+			<widget class="action_button_blue" id="repl" text="Replay" auto_size="vertical" click_event="repl"/>
+			<widget class="action_button_blue" id="pvhl" text="Previous Highlight" hidden="true" auto_size="vertical" click_event="pvhl"/>
+			<widget class="action_button_blue" id="nxhl" text="Next Highlight" hidden="true" auto_size="vertical" click_event="nxhl"/>
+			<widget class="action_button_blue" id="nxmt" text="Next Match" hidden="true" auto_size="vertical" click_event="nxmt"/>
+			<widget class="action_button_blue" id="exit" text="Exit Highlights" auto_size="vertical" click_event="exit"/>
+			<widget class="action_button_blue" id="exre" text="Exit Replay" auto_size="vertical" click_event="exre"/>
+		</container>
+		
+	</container>
+
+</panel>

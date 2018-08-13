@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE panel SYSTEM "http://www.sigames.com/dtds/sios/panel.dtd">
+
+<panel title="footer" height="0">
+	<!-- infopanel overlay -->
+	<widget class="picture" id="info" auto_size="vertical" cached="true">
+		<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0"/>
+	</widget>
+	
+	
+    	<!-- Navigation buttons -->
+		<container id="text">
+            <layout class="arrange_horizontal_attachment" layout="-1,37,56,37" gap="0"/>
+			<layout class="stick_to_sides_attachment" alignment="right" inset="4" />
+            <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" layout_children="true" />
+
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+		
+<container width="6">
+</container>
+          		
+		<!-- Back -->
+	        <container>
+	            <layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+	            <layout class="stick_to_sides_attachment" alignment="horizontal" inset="16" layout_children="true"/>
+	            	           
+				<widget class="action_button" id="back" auto_size="all" appearance="titlebar/back" cached="true">
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+                <attachment class="get_global_attachment" get_property="disp" set_property="disa"/>
+                <record id="click_event" event_id="GOTO" event_target="scrn" scin="-3"/>
+				</widget>		    	
+	        </container>
+	        
+		<!-- Continue -->	        
+	        <container>
+	            <layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+	            <layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true" inset="16"/>
+
+	            <widget class="action_button" auto_size="all" appearance="titlebar/continue" cached="true">
+	            
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+				<record id="click_event" event_id="CONT" event_target="scrn"/>
+				<attachment class="test_global_attachment" get_property="cont" set_property="disa">
+					<list id="value">
+						<integer value="-8"/>
+						<integer value="-5"/>
+					</list>
+				</attachment>
+				</widget>							
+	        </container>
+	        
+	     <!-- Forward -->
+	        <container>
+	            <layout class="arrange_vertical_attachment" alignment="top" offset="0"/>
+	            <layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true"/>
+
+	            <widget class="action_button" id="forw" auto_size="all" appearance="titlebar/forward" cached="true">
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
+                <attachment class="get_global_attachment" get_property="disn" set_property="disa"/>
+                <record id="click_event" event_id="GOTO" event_target="scrn" scin="-2"/>
+				</widget>	
+				
+				</container>						
+	        </container>
+    
+
+</panel>

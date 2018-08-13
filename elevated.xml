@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertylist SYSTEM "http://www.sigames.com/dtds/propertylist.dtd">
+
+<!--
+	The commands in this file will override the defaults contained in settings.xml (fm2005/data direcrory)
+
+	Any of these commands can be taken from the settings.xml, edited and placed here to change the look for your skin
+	-->
+
+<!-- skin details -->
+<properties version="1.0">
+
+	<!-- The name of the skin -->
+	<string id="name" value="Elevated[COMMENT: FM17 themed skin]"/>
+	<!-- The author name -->
+	<string id="auth" value="Christian Söderberg"/>
+	<!-- Short description -->
+	<string id="desc" value="Elevated version of FM06 skin (more like FM17). Left Hand side."/>
+	<!-- The version number -->
+	<string id="vers" value="1.0"/>
+
+	<flags id="prnt" value="metallic"/>
+
+	<!-- Background opacity to determine how see through this colour is -->
+	<real id="bgop" value="0.2"/>
+
+	<!-- Colour Mode -->
+	<integer id="cmod" value="1"/>
+
+	<!-- TOOLTIP PROPERTIES -->
+	<flags id="hnfn" value="fonts/fm body" comment="hint font"/>
+	<!-- Style -->
+	<integer id="hnst" value="0"/>
+	<!-- Font size -->
+	<integer id="hnss" value="8"/>
+
+	<!-- TITLE PROPERTIES -->
+	<flags id="tlfn" value="fonts/fm title" comment="title font "/>
+	<!-- Large font size -->
+	<integer id="tlss" value="14"/>
+	<!-- Normal font size -->
+	<integer id="tlsn" value="12"/>
+	<!-- Small font size -->
+	<integer id="tlsl" value="8"/>
+	<!-- title text style -->
+	<integer id="tlst" value="none"/>
+
+	<!-- MENU PROPERTIES -->
+	<flags id="mnfn" value="fonts/fm title" comment="popup menu font "/>
+	<!-- Small font size -->
+	<integer id="mnss" value="8"/>
+	<!-- Normal font size -->
+	<integer id="mnsn" value="9"/>
+	<!-- Large font size -->
+	<integer id="mnsl" value="9"/>
+	<!-- menu text style -->
+	<integer id="mnst" value="none"/>
+
+	<!-- BUTTON PROPERTIES -->
+	<flags id="cnfn" value="fonts/fm title" comment="Button Font "/>
+	<!-- Small font size -->
+	<integer id="cnss" value="7"/>
+	<!-- Normal font size -->
+	<integer id="cnsn" value="9"/>
+	<!-- Large font size -->
+	<integer id="cnsl" value="10"/>
+	<!-- button text style -->
+	<integer id="cnst" value="none"/>
+
+	<!-- TEXT PROPERTIES -->
+	<flags id="txfn" value="fonts/fm body" comment="Text font "/>
+	<!-- text size small -->
+	<integer id="txss" value="8" />
+	<!-- text size normal -->
+	<integer id="txsn" value="9" />
+	<!-- text size large -->
+	<integer id="txsl" value="11" />
+	<!-- text style -->
+	<integer id="txst" value="none"/>
+
+</properties>

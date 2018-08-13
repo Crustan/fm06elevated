@@ -1,0 +1,63 @@
+<record>
+
+	<!-- resource manager options -->
+
+	<!-- dont preload or cache anything in this folder -->
+	<boolean id="preload" value="false"/>
+	<boolean id="cache" value="true"/>
+	
+	<!-- turn off auto mapping -->
+	<boolean id="amap" value="false"/>
+
+	<list id="maps">
+<record from="help/english/awards" to="awards"/>
+<record from="help/english/club_info" to="club_info"/>
+<record from="help/english/community_info" to="community_info"/>
+<record from="help/english/confidence" to="confidence"/>
+<record from="help/english/dev_credits" to="dev_credits"/>
+<record from="help/english/finances" to="finances"/>
+<record from="help/english/fixtures" to="fixtures"/> 
+<record from="help/english/fixtures_results" to="fixtures_results"/>
+<record from="help/english/form" to="form"/>
+<record from="help/english/history_club" to="history_club"/>
+<record from="help/english/history_league" to="history_league"/>
+<record from="help/english/intro" to="intro"/>
+<record from="help/english/job_centre" to="job_centre"/>
+<record from="help/english/job_security" to="job_security"/>
+<record from="help/english/league_comp" to="league_comp"/>
+<record from="help/english/make_an_offer" to="make_an_offer"/>
+<record from="help/english/manager_options" to="manager_options"/>
+<record from="help/english/manager_snapshot" to="manager_snapshot"/>
+<record from="help/english/match_day" to="match_day"/>
+<record from="help/english/network" to="network"/>
+<record from="help/english/new_game" to="new_game"/>
+<record from="help/english/news" to="news"/>
+<record from="help/english/notebook" to="notebook"/>
+<record from="help/english/offer_new_contract" to="offer_new_contract"/>
+<record from="help/english/offer_to_clubs" to="offer_to_clubs"/>
+<record from="help/english/options" to="options"/>
+<record from="help/english/personal" to="personal"/>
+<record from="help/english/player" to="player"/>
+<record from="help/english/player_stats" to="player_stats"/>
+<record from="help/english/preferences" to="preferences"/>
+<record from="help/english/profile" to="profile"/>
+<record from="help/english/release_comment" to="release_comment"/>
+<record from="help/english/res_credits" to="res_credits"/>
+<record from="help/english/search_players" to="search_players"/>
+<record from="help/english/search_scouting" to="search_scouting"/>
+<record from="help/english/search_shortlist" to="search_shortlist"/>
+<record from="help/english/search_staff" to="search_staff"/>
+<record from="help/english/set_transfer_status" to="set_transfer_status"/>
+<record from="help/english/squad_menu" to="squad_menu"/>
+<record from="help/english/tactics" to="tactics"/>
+<record from="help/english/team_report" to="team_report"/>
+<record from="help/english/team_stats" to="team_stats"/>
+<record from="help/english/team_talks" to="team_talks"/>
+<record from="help/english/training_overview" to="training_overview"/>
+<record from="help/english/training_coaches" to="training_coaches"/>
+<record from="help/english/training_players" to="training_players"/>
+<record from="help/english/transfers" to="transfers"/>
+<record from="help/english/world" to="world"/>
+
+	</list>
+</record>

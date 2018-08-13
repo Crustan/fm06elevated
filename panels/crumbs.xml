@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE panel SYSTEM "http://www.sigames.com/dtds/sios/panel.dtd">
+
+<panel height="35">
+
+	<!-- active area -->
+	<container>
+        <layout class="arrange_vertical_attachment" alignment="fill" offset="0" gap="0"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" inset="195" layout_children="true" />
+        <layout class="stick_to_sides_attachment" alignment="bottom" inset="0" layout_children="true" />
+
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0" />
+
+        <container id="crum">
+            <attachment class="line_up_attachment" get_property="bcmb" submenu_type="bcrm"/>
+            
+            <!-- Arrange the children widgets from left to right, horizontally centrered -->
+            <layout class="arrange_horizontal_attachment" alignment="left"/>
+	        <layout class="centre_in_parent_attachment" alignment="vertical" offset="12" layout_children="true" priority="1"/>
+        </container>          
+    </container>
+	
+</panel>

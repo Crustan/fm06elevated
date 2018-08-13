@@ -1,0 +1,21 @@
+<record>
+
+	<!-- resource manager options -->
+
+	<!-- dont preload or cache anything in this folder -->
+	<boolean id="preload" value="false"/>
+	<boolean id="cache" value="false"/>
+	
+	<!-- turn on auto mapping -->
+	<boolean id="amap" value="true"/>
+
+
+	<list id="maps">
+	
+		<record from="default" to="graphics/backgrounds/default/default"/>
+		<record from="match" to="graphics/backgrounds/match/match"/>
+		<record from="meeting room" to="graphics/backgrounds/meeting room/meeting room"/>
+		<record from="news" to="graphics/backgrounds/news/news"/>
+			
+	</list>
+</record>

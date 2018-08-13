@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE widgetcontainer SYSTEM "http://www.sigames.com/dtds/widgetcontainer.dtd">
+
+<screen title="News">
+
+	<list id="acts">
+		<record text="Next Unread" event_id="nexu"/>
+		<record text="Next Response" event_id="nexr"/>
+		<record text="Select All" event_id="sela"/>
+		<record text="Mark As Read" event_id="mard"/>
+	</list>
+
+	<layout class="arrange_vertical_attachment" alignment="top,fill" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true" inset="0"/>
+
+	<container>
+		<!-- one main panel, and a small filter panel on the left (which can be hidden) -->
+		<layout class="arrange_horizontal_attachment" alignment="right,extend" offset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" layout_children="true" inset="0"/>
+	
+		<container id="main" >
+			<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" layout_children="true"/>
+	
+			<!-- index panel -->
+			<container class="titled_box" title="Inbox" id="indp" height="214">
+
+			
+				<!-- embedded buttons -->
+				<container id="btns" embed_in_frame="true">
+
+					<layout class="arrange_horizontal_attachment" alignment="right" gap="8" embed_in_frame="true"/>
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" layout_children="true" embed_in_frame="true"/>
+			
+					<layout class="stick_to_sides_attachment" alignment="top,right" embed_in_frame="true" inset="3"/>
+			
+					<layout class="fit_children_attachment" alignment="vertical" embed_in_frame="true"/>
+					<layout class="fit_children_attachment" alignment="horizontal,fill" gap="8" embed_in_frame="true"/>
+					
+					<widget class="embedded_action_button" id="nwsf" clke="filt" sstt="true" text="Show Filters" tkex="true" auto_size="all" fixe="true" svtk="true" embed_in_frame="true" save_current_state="true"/>
+				</container>
+				
+				<layout class="arrange_vertical_attachment" alignment="bottom,extend" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" layout_children="true"/>
+			  	
+				<container id="indb">
+					<layout class="arrange_vertical_attachment" alignment="top,extend" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" layout_children="true"/>
+
+					<widget class="table" id="indx">
+						<string id="layout" value="24, -1, 120, 150"/>
+						<flags id="mode" value="select_rows, select_multiple, fill_rows"/>
+						
+						<list id="headings">
+							<record/>
+							<record text="Headline" alignment="left,centre_y"/>
+							<record text="Type" alignment="left,centre_y"/>
+							<record text="Date" alignment="left,centre_y"/>
+						</list>
+						
+						<list id="column_display_properties">
+							<record id="0" sort_disabled="true"/>
+							<record id="1" sort_disabled="true"/>
+							<record id="2" sort_disabled="true"/>
+							<record id="3" sort_disabled="true"/>
+						</list>
+
+					</widget>
+					
+				</container>
+	
+			</container>
+			
+			<!-- message panel -->
+			<container class="titled_box" id="date" title="">
+				<layout class="stick_to_sides_attachment" alignment="top" inset="210"/>
+				<layout class="arrange_vertical_attachment" alignment="top,extend" gap="8"/>
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" layout_children="true"/>
+				
+				<!-- whether to hide the headline - not a good idea in this case since it is the titled box itself -->
+				<boolean id="hdwe" comment="date" value="false"/>
+				
+				<!-- this box contains the date & status items -->
+				<container id="nbx2">
+					<layout class="stick_to_sides_attachment" alignment="top" inset="0" layout_children="true"/>
+					<layout class="stick_to_sides_attachment" alignment="left" inset="5"/>
+					<!--<layout class="centre_in_parent_attachment" alignment="vertical" inset="0" layout_children="true"/>-->
+					<layout class="fit_children_attachment" alignment="vertical"/>
+					<layout class="arrange_horizontal_attachment" alignment="right,extend" gap="8" offset="0"/>
+					
+					<!-- headline -->
+					<widget class="text" auto_size="vertical" id="nwhd" size="20" colour="white" style="none"/>
+
+				</container>
+					
+				<!-- news area -->
+				<container>
+					<layout class="arrange_vertical_attachment" alignment="bottom,extend"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" layout_children="true"/>
+					
+					<!-- box containing the actual news; the text item goes inside a scrolling box -->
+					<container class="scrolling_box" id="tbox" save_current_state="true">
+						<container>
+							<layout class="stick_to_sides_attachment" alignment="top" inset="0" layout_children="true"/>
+							<layout class="fit_children_attachment" alignment="vertical"/>
+							<layout class="arrange_horizontal_attachment" alignment="right,extend" gap="5" offset="15"/>
+
+							<widget class="text" id="text" auto_size="vertical" spec="text,large" />
+							<widget class="picture" id="pict" auto_size="all"/>
+						</container>
+					</container>
+					
+					<!-- box for any response items to go into -->
+					<container id="resp">
+						<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+						<layout class="arrange_horizontal_attachment" alignment="right" offset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="top" inset="0" layout_children="true"/>
+					</container>
+
+				</container>
+			</container>
+		</container>
+	
+		<!-- filter editing panel -->
+		<container class="filter_panel" id="filp" width="250">
+				<colour id="colour" name="white" style="none"/>
+				<flags id="style" value="none"/>
+
+			<!-- buttons area -->
+			<container id="btnf" embed_in_frame="true">
+				<layout class="arrange_horizontal_attachment" alignment="right" gap="8" embed_in_frame="true"/>
+				<layout class="stick_to_sides_attachment" alignment="top" inset="0" layout_children="true" embed_in_frame="true"/>
+
+				<layout class="stick_to_sides_attachment" alignment="top,right" embed_in_frame="true" inset="3"/>
+
+				<layout class="fit_children_attachment" alignment="vertical" embed_in_frame="true"/>
+				<layout class="fit_children_attachment" alignment="horizontal,fill" gap="8" embed_in_frame="true"/>
+		
+				<!-- filter menu -->
+				<widget class="embedded_action_button" id="nwhf" clke="filH" text="Hide Filters" auto_size="all" embed_in_frame="true" save_current_state="true"/>
+		
+			</container>
+			
+			<boolean id="hidn" value="true"/>
+
+		</container>
+	</container>
+</screen>

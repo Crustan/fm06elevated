@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertylist SYSTEM "http://www.sigames.com/dtds/propertylist.dtd">
+
+<properties version="1.0">
+	<integer id="mode" value="1"/>
+	<flags id="styl" value="transparent, no_border"/>
+</properties>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE propertylist SYSTEM "http://www.sigames.com/dtds/sios/properties.dtd">
+
+<!-- image properties -->
+<properties>
+
+	<!-- image borders -->
+	<!-- these determine how many pixels any content is inset from each side of the image -->
+	<!-- (for example, in the case of a button, the content would be the text label) -->
+
+	<!-- the left & right inset values are particularly important for column headings,
+	     as they also determine the inset to be used for the data in that column
+	     of a table
+	-->
+
+	<integer id="left_border" value="5"/>
+	<integer id="top_border" value="5"/>
+	<integer id="right_border" value="3"/>
+	<integer id="bottom_border" value="1"/>
+	
+</properties>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE panel SYSTEM "http://www.sigames.com/dtds/sios/panel.dtd">
+
+<!-- this file lists the global panels that should be installed -->
+<panel name="global panels" version="1.0">
+
+	<!-- background picture - covers entire screen -->
+	<widget class="background" id="bgnd" file="backgrounds/default">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</widget>
+
+
+
+	<!-- Main Box -->
+	<container file="mainbox">
+		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="10"/>
+
+		<layout class="stick_to_sides_attachment" alignment="top" inset="48"/>
+
+		<!-- stick to top of footer panel -->
+		<layout class="stick_to_object_attachment" target="foot" get_side="top" set_side="bottom" offset="-5"/>
+	</container>
+
+
+
+
+
+	<!-- Panels Box -->
+	<!-- Contains global panels - also the container for the screen -->
+	<container id="pnls">
+
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+		<!-- header area at top of screen - with title, menus, etc -->
+		<container id="head" file="header">
+			<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0"/>
+		</container>
+
+		<!-- breadcrumbs -->
+		<container id="crumbs" file="crumbs">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="100"/>
+		</container>
+
+		<!-- footer area at bottom of screen - with ticker, breadcrumbs, etc -->
+		<container id="foot" file="footer">
+			<layout class="stick_to_sides_attachment" alignment="horizontal, bottom" inset="0"/>
+		</container>
+
+		<!-- sections area on the side of the screen -->
+		<container id="sect" file="sections">
+			<!-- stick to left of screen -->
+			<layout class="stick_to_sides_attachment" alignment="left" inset="7"/>
+			<layout class="fit_children_attachment" alignment="horizontal" offset="0"/>
+
+			<layout class="stick_to_sides_attachment" alignment="top" inset="107"/>
+
+			<!-- stick to top of footer panel -->
+			<layout class="stick_to_object_attachment" target="foot" get_side="top" set_side="bottom" offset="3"/>
+
+
+			<!-- hide this panel if the game isn't set up yet -->
+			<attachment class="test_global_attachment" get_property="scid" set_property="hidn" skip_if_false="false">
+				<unsigned id="value" value="1"/>
+			</attachment>
+
+			<attachment class="test_global_attachment" get_property="FS  " value="true" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
+		</container>
+
+		<!-- screen content area -->
+		<container id="scca">
+			<layout class="stick_to_sides_attachment" alignment="left" layout_children="true" inset="12"/>
+			<layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true" inset="8"/>
+			<layout class="stick_to_sides_attachment" alignment="top" layout_children="true" inset="-2"/>
+			<layout class="stick_to_sides_attachment" alignment="vertical" layout_children="true" inset="-5"/>
+			<layout class="fill_space_attachment" inset="4"/>
+		</container>
+
+		<!-- Maximize / Minimize -->
+		<container id="fullscreen" file="fullscreen">
+			<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+			<layout class="stick_to_sides_attachment" alignment="top" inset="100"/>
+		</container>
+
+	</container>
+
+	<!-- modal area -->
+	<container id="modl">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+	</container>
+
+	<!-- progress panel -->
+	<container class="progress_panel">
+		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+		<attachment class="get_global_attachment" get_property="prgp" set_property="prgp"/>
+	</container>
+
+</panel>
