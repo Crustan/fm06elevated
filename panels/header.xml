@@ -37,13 +37,14 @@
 					<layout class="centre_in_parent_attachment" alignment="vertical" layout_children="true"/>
 					<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
 
-					<widget class="picture" id="pict" auto_size="all" file="navigation/history/history_back" cached="true" rthr="68">
+					<widget class="picture" id="back" auto_size="all" file="navigation/history/history_back" cached="true" rthr="68">
 						<attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
 						<layout class="stick_to_sides_attachment" alignment="left" offset="0" inset="0"/>
 						<layout class="stick_to_sides_attachment" alignment="vertical" offset="0" inset="0"/>
 					</widget>
 
-					<widget class="picture" id="pict" auto_size="all" file="navigation/history/history_forward" cached="true" rthr="68">
+					<widget class="picture" id="forw" auto_size="all" file="navigation/history/history_forward" cached="true" rthr="68">
+						<attachment class="test_global_attachment" get_property="disn" value="1" skip_if_null="false" set_property="hidn"/>
 						<attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
 						<layout class="stick_to_sides_attachment" alignment="right" offset="0" inset="0"/>
 						<layout class="stick_to_sides_attachment" alignment="vertical" offset="0" inset="0"/>
