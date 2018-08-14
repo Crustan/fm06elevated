@@ -27,7 +27,7 @@
 			<!-- HEADER LEFT AREA -->
 			<container>
 				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" layout_children="true"/>
-				<layout class="stick_to_sides_attachment" alignment="left, vertical" />
+				<layout class="stick_to_sides_attachment" alignment="left, vertical" inset="0" offset="0" />
 
 				<layout class="fit_children_attachment" alignment="horizontal,fill" gap="0" offset="0" />
 				<layout class="arrange_horizontal_attachment" layout="88,60,32,-1" gap="0" />
@@ -35,31 +35,32 @@
 				<!-- History Back & Forward -->
 				<container>
 					<layout class="centre_in_parent_attachment" alignment="vertical" layout_children="true"/>
+					<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
 
-					<widget class="picture" id="pict" auto_size="all" file="titlebar/back_100" cached="true" rthr="70">
+					<widget class="picture" id="pict" auto_size="all" file="navigation/history/history_back" cached="true" rthr="68">
 						<attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
-						<layout class="stick_to_sides_attachment" alignment="left" offset="0" inset="10"/>
-						<layout class="stick_to_sides_attachment" alignment="vertical" inset="16"/>
+						<layout class="stick_to_sides_attachment" alignment="left" offset="0" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" offset="0" inset="0"/>
 					</widget>
 
-					<widget class="picture" id="pict" auto_size="all" file="titlebar/forward_100" cached="true" rthr="70">
+					<widget class="picture" id="pict" auto_size="all" file="navigation/history/history_forward" cached="true" rthr="68">
 						<attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
-						<layout class="stick_to_sides_attachment" alignment="right" offset="0" inset="20"/>
-						<layout class="stick_to_sides_attachment" alignment="vertical" inset="16"/>
+						<layout class="stick_to_sides_attachment" alignment="right" offset="0" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" offset="0" inset="0"/>
 					</widget>
 
-					<widget class="action_button" id="back" auto_size="all" appearance="titlebar/back" cached="true">
+					<widget class="action_button" id="back" auto_size="all" appearance="navigation/history/back" cached="true">
 						<attachment class="get_global_attachment" get_property="disp" set_property="disa"/>
 						<record id="click_event" event_id="GOTO" event_target="scrn" scin="-3"/>
-						<layout class="stick_to_sides_attachment" alignment="left" offset="0" inset="10"/>
-						<layout class="stick_to_sides_attachment" alignment="vertical" inset="16"/>
+						<layout class="stick_to_sides_attachment" alignment="left" offset="0" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" offset="0" inset="0"/>
 					</widget>
 
-					<widget class="action_button" id="forw" auto_size="all" alignment="centre" appearance="titlebar/forward" cached="true">
+					<widget class="action_button" id="forw" auto_size="all" alignment="centre" appearance="navigation/history/forward" cached="true">
 						<attachment class="get_global_attachment" get_property="disn" set_property="disa"/>
 						<record id="click_event" event_id="GOTO" event_target="scrn" scin="-2"/>
-						<layout class="stick_to_sides_attachment" alignment="right" offset="0" inset="20"/>
-						<layout class="stick_to_sides_attachment" alignment="vertical" inset="16"/>
+						<layout class="stick_to_sides_attachment" alignment="right" offset="0" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="vertical" offset="0" inset="0"/>
 					</widget>
 
 				</container>
