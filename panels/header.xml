@@ -15,7 +15,7 @@
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" layout_children="true"/>
 
 		<!-- Panel graphic - COLOUR -->
-		<widget class="picture" id="pict" file="navigation/titlebar" auto-size="all" cached="true" rthr="70">
+		<widget class="picture" id="pict" file="navigation/titlebar" auto-size="all" cached="true" rthr="68">
 			<attachment class="get_global_attachment" get_property="bkcl" set_property="colr"/>
 			<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
 		</widget>
@@ -38,6 +38,7 @@
 					<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
 
 					<widget class="picture" id="back" auto_size="all" file="navigation/history/history_back" cached="true" rthr="68">
+						<attachment class="test_global_attachment" get_property="disp" value="1" skip_if_null="false" set_property="hidn"/>
 						<attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
 						<layout class="stick_to_sides_attachment" alignment="left" offset="0" inset="0"/>
 						<layout class="stick_to_sides_attachment" alignment="vertical" offset="0" inset="0"/>
@@ -101,21 +102,19 @@
 				<!-- Title -->
 				<container id="tita">
 					<layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true"/>
-					<layout class="stick_to_sides_attachment" alignment="vertical"/>
-
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0"/>
 					<layout class="arrange_vertical_attachment" layout="-1,16" />
-					<!-- <layout class="fit_children_attachment" aligment="vertical, fill" /> -->
 
 					<!-- title area -->
-					<widget class="text" id="sect" standard_spec="title,large" autosize="all" alignment="left">
-						<layout class="stick_to_sides_attachment" alignment="top" inset="8"/>
+					<widget class="text" id="sect" standard_spec="title,large" autosize="all" alignment="bottom,left" size="16">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="26"/>
 						<attachment class="get_global_attachment" get_property="titl" set_property="text"/>
 						<attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
 					</widget>
 
 					<!-- subtitle area -->
-					<widget class="text" id="subs" standard_spec="text" alignment="left" mlti="false" auto_size="horizontal">
-						<layout class="stick_to_sides_attachment" alignment="bottom" inset="4"/>
+					<widget class="text" id="subs" standard_spec="text" mlti="false" auto_size="horizontal" alignment="bottom,left" size="8">
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="14"/>
 						<!-- hide when no subtitle -->
 						<attachment class="test_global_attachment" get_property="subt" skip_if_null="false" set_property="hidn"/>
 
@@ -128,28 +127,29 @@
 
 			<!-- HEADER RIGHT AREA -->
 			<container>
-				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" layout_children="true"/>
-				<layout class="stick_to_sides_attachment" alignment="right" inset="0" offset="0" layout_children="true"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" layout_children="true"/>
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="right" layout_children="true"/>
 				<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
 				<layout class="fit_children_attachment" alignment="horizontal,fill" />
 				<layout class="arrange_horizontal_attachment" layout="120,150" />
 
 				<container class="plain_box" appearance="navigation/date/paper">
-					<layout class="stick_to_sides_attachment" alignment="vertical" layout_children="true" />
-					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0"/>
-					<layout class="stick_to_sides_attachment" alignment="right" inset="150"/>
-					<layout class="arrange_vertical_attachment" layout="-1,-1" gap="0"/>
 					<attachment class="test_global_attachment" get_property="cont" value="-8" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" layout_children="true" />
+					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="right" inset="150"/>
+					<layout class="arrange_vertical_attachment" layout="-1,16" />
 
-					<widget class="date_cell" id="date" text="date" alignment="top, center" auto_size="vertical" size="10">
+					<widget class="date_cell" id="date" text="date" alignment="bottom,center" size="12">
 						<layout class="stick_to_sides_attachment" alignment="horizontal" />
-						<layout class="stick_to_sides_attachment" alignment="top" inset="20" />
+						<layout class="stick_to_sides_attachment" alignment="bottom" inset="28" />
 
 						<attachment class="get_global_attachment" get_property="date" set_property="valu"/>
 						<attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
 
 						<string id="format">
-								[%date#1-long_no_day]
+								[%date#1-short_no_year]
 						</string>
 					</widget>
 
@@ -166,7 +166,7 @@
 				</container>
 
 				<!-- Continue Button -->
-				<widget class="text_button" appearance="navigation/continue_button/button" text="Continue" alignment="vertical" size="14">
+				<widget class="text_button" appearance="navigation/continue_button/button" text="Continue" alignment="vertical" size="12">
 					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
 					<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
 
