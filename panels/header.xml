@@ -2,17 +2,15 @@
 <!DOCTYPE panel SYSTEM "http://www.sigames.com/dtds/sios/panel.dtd">
 
 <panel title="header">
-	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" layout_children="true"/>
 	<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" layout_children="true"/>
 
 	<attachment class="get_global_attachment" get_property="Dmen" set_property="coni"/>
 
 	<!-- STANDARD HEADER ======================================================================== -->
-	<container id="NHdr" height="64">
-		<!-- TODO: Might be value 22 here -->
-		<attachment class="test_global_attachment" get_property="scid" value="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-
+	<container id="NHdr" height="56">
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" layout_children="true"/>
+		<attachment class="test_global_attachment" get_property="scid" value="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
 
 		<!-- Panel graphic - COLOUR -->
 		<widget class="picture" id="pict" file="navigation/titlebar" auto-size="all" cached="true" rthr="68">
@@ -21,19 +19,20 @@
 		</widget>
 
 		<container>
-			<layout class="stick_to_sides_attachment" alignment="all" inset="0" offset="0" layout_children="true"/>
-			<layout class="arrange_horizontal_attachment" offset="0" inset="0" layout="-2,-1" />
+			<layout class="stick_to_sides_attachment" alignment="all" inset="0" offset="0"/>
 
+			<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0" layout_children="true"/>
+			<layout class="arrange_horizontal_attachment" offset="0" inset="0" layout="-1,-1" />
 			<!-- HEADER LEFT AREA -->
 			<container>
-				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" layout_children="true"/>
 				<layout class="stick_to_sides_attachment" alignment="left, vertical" inset="0" offset="0" />
 
-				<layout class="fit_children_attachment" alignment="horizontal,fill" gap="0" offset="0" />
-				<layout class="arrange_horizontal_attachment" layout="88,50,32,-1" gap="0" />
+				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0" layout_children="true"/>
+				<layout class="arrange_horizontal_attachment" layout="88,32,50,-1" gap="0" />
 
 				<!-- History Back & Forward -->
 				<container>
+					<!-- To adjust height, you need to change the images -->
 					<layout class="centre_in_parent_attachment" alignment="vertical" layout_children="true"/>
 					<layout class="stick_to_sides_attachment" alignment="left" inset="0" />
 
@@ -67,31 +66,20 @@
 
 				</container>
 
-				<!-- Team Logo -->
-				<container>
-					<layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true"/>
-					<layout class="stick_to_sides_attachment" alignment="vertical" />
-
-					<attachment class="test_global_attachment" get_property="mnpc" skip_if_null="false" set_property="hidn"/>
-
-					<widget class="picture" id="logo" auto_size="all">
-						<layout class="centre_in_parent_attachment" alignment="all" offset="0" inset="0"/>
-						<!-- Get logo -->
-						<attachment class="get_global_attachment" get_property="mnpc" set_property="file" skip_if_null="false"/>
-					</widget>
-				</container>
-
 				<!-- Quick Flicks -->
 				<container id="text">
-					<layout class="stick_to_sides_attachment" alignment="vertical" />
-					<layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true" />
-					<!-- <layout class="stick_to_sides_attachment" alignment="horizontal" /> -->
-					<layout class="arrange_vertical_attachment" layout="-1,-1"/>
+
+					<!-- Hide if Match -->
+					<attachment class="test_global_attachment" get_property="scid" value="22" set_property="hidn" skip_if_null="false" />
+
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" offset="0" layout_children="true" />
+					<layout class="arrange_vertical_attachment" layout="-1,-1" />
 
 					<container>
-						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="4" layout_children="true"/>
-						<layout class="stick_to_sides_attachment" alignment="top" inset="12" layout_children="true"/>
-						<widget class="picture" id="pict" file="navigation/quickflicks/up_c" auto_size="all" cached="true" rthr="70">
+						<layout class="stick_to_sides_attachment" alignment="top" layout_children="true"/>
+						<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" inset="0" layout_children="true"/>
+
+						<widget class="picture" id="pict" file="navigation/quickflicks/up_c" auto_size="all" cached="true" rthr="68">
 							<attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
 						</widget>
 
@@ -101,39 +89,66 @@
 					</container>
 
 					<container>
-						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="4" layout_children="true"/>
-						<layout class="stick_to_sides_attachment" alignment="bottom" inset="12" layout_children="true"/>
-						<widget class="picture" id="pict" file="navigation/quickflicks/down_c" auto_size="all" cached="true" rthr="70">
+						<layout class="stick_to_sides_attachment" alignment="bottom" layout_children="true"/>
+						<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" inset="0" layout_children="true"/>
+
+						<widget class="picture" id="pict" file="navigation/quickflicks/down_c" auto_size="all" cached="true" rthr="68">
 							<attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
 						</widget>
+
 						<widget class="quick_flick_button" auto_size="all" appearance="navigation/quickflicks/down" cached="true">
 							<integer id="step" value="1" />
 						</widget>
 					</container>
 				</container>
 
+				<!-- Team Logo -->
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" layout_children="true"/>
+
+					<!-- Hide if no logo -->
+					<attachment class="test_global_attachment" get_property="mnpc" skip_if_null="false" set_property="hidn"/>
+
+					<widget class="picture" id="logo" auto_size="all">
+						<layout class="centre_in_parent_attachment" alignment="all" offset="0" inset="0"/>
+						<!-- Get logo -->
+						<attachment class="get_global_attachment" get_property="mnpc" set_property="file" skip_if_null="false"/>
+						<!-- Hide if Match -->
+						<attachment class="test_global_attachment" get_property="scid" value="22" set_property="hidn" skip_if_null="false" />
+					</widget>
+				</container>
+
 				<!-- Title -->
-				<container id="tita">
-					<layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true"/>
+				<container>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" layout_children="true"/>
 					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0"/>
-					<layout class="arrange_vertical_attachment" layout="-1,16" />
+					<layout class="arrange_vertical_attachment" layout="34" gap="0" />
 
-					<!-- title area -->
-					<widget class="text" id="sect" standard_spec="title,large" autosize="all" alignment="bottom,left" size="16">
-						<layout class="stick_to_sides_attachment" alignment="bottom" inset="24"/>
-						<attachment class="get_global_attachment" get_property="titl" set_property="text"/>
-						<attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
-					</widget>
+					<container id="tita">
+						<layout class="centre_in_parent_attachment" alignment="vertical" offset="0" inset="0"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" />
 
-					<!-- subtitle area -->
-					<widget class="text" id="subs" standard_spec="text" mlti="false" auto_size="horizontal" alignment="bottom,left" size="8">
-						<layout class="stick_to_sides_attachment" alignment="bottom" inset="12"/>
-						<!-- hide when no subtitle -->
-						<attachment class="test_global_attachment" get_property="subt" skip_if_null="false" set_property="hidn"/>
+						<layout class="stick_to_sides_attachment" alignment="horizontal" inset="16" layout_children="true"/>
+						<layout class="arrange_vertical_attachment" layout="24,10" gap="-10" />
 
-						<attachment class="get_global_attachment" get_property="subt" set_property="text"/>
-						<attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
-					</widget>
+						<!-- title area -->
+						<widget class="text" id="sect" standard_spec="title,large" autosize="horizontal" alignment="left" size="16">
+							<layout class="stick_to_sides_attachment" alignment="top" offset="0" inset="0"/>
+							<attachment class="get_global_attachment" get_property="titl" set_property="text"/>
+							<attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
+						</widget>
+
+						<!-- subtitle area -->
+						<widget class="text" id="subs" standard_spec="text" mlti="false" auto_size="all" alignment="left" size="8">
+							<layout class="stick_to_sides_attachment" alignment="bottom" offset="0" inset="0"/>
+
+							<!-- hide when no subtitle -->
+							<attachment class="test_global_attachment" get_property="subt" skip_if_null="false" set_property="hidn"/>
+
+							<attachment class="get_global_attachment" get_property="subt" set_property="text"/>
+							<attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
+						</widget>
+					</container>
 				</container>
 
 			</container>
@@ -179,13 +194,14 @@
 				</container>
 
 				<!-- Continue Button -->
-				<widget class="text_button" appearance="navigation/continue_button/button" text="Continue" alignment="vertical" size="12">
+				<widget class="text_button" appearance="navigation/continue_button/button" text="Continue" alignment="centre" size="12" colour="white">
 					<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" />
 					<layout class="stick_to_sides_attachment" alignment="right" inset="0"/>
 
-					<attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
+					<!-- <attachment class="get_global_attachment" get_property="fcol" set_property="colr"/> -->
 					<record id="click_event" event_id="CONT" event_target="scrn"/>
 					<attachment class="test_global_attachment" get_property="cont" set_property="disa">
+						<layout class="centre_in_parent_attachment" alignment="all" offset="0" inset="0"/>
 						<list id="value">
 							<integer value="-8"/>
 							<integer value="-5"/>
@@ -200,11 +216,13 @@
 		</container>
 	</container>
 	<!-- MATCH HEADER ======================================================================== -->
-	<container id="Mhdr" width="500">
+	<container id="Mhdr">
 		<attachment class="test_global_attachment" get_property="scid" value="22" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
 
-		<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
-		<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" layout_children="true"/>
+		<layout class="fit_children_attachment" alignment="vertical" inset="0" offset="0"/>
+		<!-- Inset here should be same width as Header Right -->
+		<layout class="stick_to_sides_attachment" alignment="right" inset="270"/>
+		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0"/>
 
 		<widget class="match_titlebar_panel"/>
 	</container>
