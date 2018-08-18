@@ -9,9 +9,9 @@
 	<!-- image borders -->
 	<!-- these determine how many pixels any content is inset from each side of the box -->
 
-	<integer id="left_border" value="12"/>
-	<integer id="top_border" value="32"/>
-	<integer id="right_border" value="14"/>
-	<integer id="bottom_border" value="16"/>
-	
+	<integer id="left_border" value="0"/>
+	<integer id="top_border" value="0"/>
+	<integer id="right_border" value="0"/>
+	<integer id="bottom_border" value="0"/>
+
 </properties>
