@@ -9,11 +9,11 @@
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
 	</widget>
 
+	<!-- Wrapper for everything, except background picture and modals -->
 	<container>
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
 		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" layout_children="true"/>
 		<layout class="arrange_horizontal_attachment" layout="48,1,-1" offset="0" inset="0" gap="1"/>
-		<!-- <layout class="fit_children_attachment" alignment="horizontal,fill" /> -->
 
 		<!-- Sidebar -->
 		<container class="bordered_box" appearance="sidebar/sidebar">
@@ -25,33 +25,38 @@
 
 		<container>
 			<!-- SPACER FOR ALIGNING MAIN WITH SIDEBAR -->
-			<layout class="fit_children_attachment" aligment="horizontal" inset="0" offset="0"/>
+			<layout class="fit_children_attachment" inset="0" offset="0"/>
+			<!-- Hide on intro -->
+			<attachment class="test_global_attachment" get_property="scid" value="2" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
 		</container>
 
+		<!-- Main Box -->
 		<container>
 			<layout class="fill_space_attachment" inset="0" offset="0"/>
-			<!-- <layout class="stick_to_sides_attachment" alignment="all" inset="0"/> -->
-			<!-- Main Box -->
-			<container file="mainbox">
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-				<!-- <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/> -->
 
-				<!-- stick to top of footer panel -->
-				<!-- <layout class="stick_to_object_attachment" target="foot" get_side="top" set_side="bottom" offset="-5"/> -->
-			</container>
+			<!-- Semi transparent background for main area  -->
+			<widget class="bordered_box" appearance="boxes/mainbox/paper">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+				<layout class="stick_to_object_attachment" target="foot" get_side="top" set_side="bottom" offset="-5"/>
+			</widget>
+			<!-- <container file="mainbox">
+				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+				stick to top of footer panel
+				<layout class="stick_to_object_attachment" target="foot" get_side="top" set_side="bottom" offset="-5"/>
+			</container> -->
 
 			<!-- Panels Box -->
 			<!-- Contains global panels - also the container for the screen -->
 			<container id="pnls">
-
 				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-
-				<!-- <layout class="stick_to_sides_attachment" alignment="right" inset="0"/> -->
-				<!-- <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/> -->
 
 				<!-- header area at top of screen - with title, menus, etc -->
 				<container id="head" file="header">
-					<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" offset="0"/>
+
+					<!-- Hide on intro -->
+					<attachment class="test_global_attachment" get_property="scid" value="2" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
 				</container>
 
 				<!-- nav area under header, with current links -->
@@ -86,10 +91,10 @@
 
 				<!-- screen content area -->
 				<container id="scca">
-					<layout class="stick_to_sides_attachment" alignment="left" layout_children="true" inset="12"/>
-					<layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true" inset="8"/>
-					<layout class="stick_to_sides_attachment" alignment="top" layout_children="true" inset="-2"/>
-					<layout class="stick_to_sides_attachment" alignment="vertical" layout_children="true" inset="-5"/>
+					<layout class="stick_to_sides_attachment" alignment="left" layout_children="true" inset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true" inset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="top" layout_children="true" inset="0"/>
+					<layout class="stick_to_sides_attachment" alignment="vertical" layout_children="true" inset="0"/>
 					<layout class="fill_space_attachment" inset="0"/>
 				</container>
 
