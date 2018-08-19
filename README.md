@@ -46,7 +46,10 @@ Layouting FM elements is a tricky part of skinning. There are numerous of layout
     <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
 
     <layout class="fill_space_attachment"/>
-Fills the element in parent. Good for elements that have responsive measure (eg. -1), and maybe has other elements on the side.
+Fills the element in parent. Good for elements that have responsive 
+measure (eg. -1), and maybe has other elements on the side.
+
+    <layout kind="stick_to_object_attachment" priority="1" target="ibng" get_side="right" set_side="left" move_side="true" offset="8"/>
 
 ## Screen ID:s
 Every screen ha an ID that's used for disabling, enabling different components (see Conditionals above)
