@@ -3,6 +3,7 @@
 
 <panel title="header">
 	<layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+	<!-- <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" /> -->
 	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" layout_children="true"/>
 
 	<attachment class="get_global_attachment" get_property="Dmen" set_property="coni"/>
@@ -72,6 +73,8 @@
 
 					<!-- Hide if Match -->
 					<attachment class="test_global_attachment" get_property="scid" value="22" set_property="hidn" skip_if_null="false" />
+					<!-- Hide if intro -->
+					<attachment class="test_global_attachment" get_property="scid" value="2" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
 
 					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="8" offset="0" layout_children="true" />
 					<layout class="arrange_vertical_attachment" layout="-1,-1" />
@@ -159,16 +162,16 @@
 				<layout class="stick_to_sides_attachment" alignment="right,vertical" inset="0" offset="0"/>
 
 				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0" layout_children="true"/>
-				<layout class="arrange_horizontal_attachment" offset="0" inset="0" layout="-1,80,120,140" gap="0"/>
+				<layout class="arrange_horizontal_attachment" offset="0" inset="0" layout="-1,91,100,140" gap="0"/>
 				<container>
 					<!-- STRETCHING DUMMY CONTAINER  -->
 				</container>
-				
+
 				<!-- Pref menu -->
-				<container class="text_button" appearance="navigation/header_button/button">
-					<attachment class="test_global_attachment" get_property="cont" value="-8" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
-					<!-- <layout class="stick_to_sides_attachment" alignment="hor" inset="0"/> -->
-				</container>
+				<widget class="pref_button">
+					<record id="items" file="menus/game"/>
+					<string id="hint" value="Options"/>
+				</widget>
 
 				<!-- Date  -->
 				<container class="plain_box" appearance="navigation/header_button/button">
@@ -231,7 +234,7 @@
 
 		<layout class="fit_children_attachment" alignment="vertical" inset="0" offset="0"/>
 		<!-- Inset here should be same width as Header Right -->
-		<layout class="stick_to_sides_attachment" alignment="right" inset="270"/>
+		<layout class="stick_to_sides_attachment" alignment="right" inset="340"/>
 		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0"/>
 
 		<widget class="match_titlebar_panel"/>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE class SYSTEM "http://www.sigames.com/dtds/sios/class.dtd">
+
+<!-- a popup menu for use on the header section -->
+<!-- (like a normal popup, but has a non-standard metallic appearance) -->
+
+<class class="pref_button" parent="popup_button">
+    <flags id="appearance" value="navigation/options"/>
+    <flags id="menu_appearance" value="menu/blue"/>
+    <flags id="auto_size" value="horizontal"/>
+    <boolean id="fixed" value="true"/>
+    <boolean id="dont_set_selection" value="true"/>
+    <flags id="style" value="embossed"/>
+</class>

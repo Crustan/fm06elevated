@@ -1,0 +1,40 @@
+<!-- main game menu -->
+<record name="Game Options" fixed="true">
+  <flags id="event_target" value="scrn"/>
+
+  <list id="items">
+    <record>
+      <string id="text" value="Preferences" />
+      <flags id="event_id" value="PREF" />
+    </record>
+    <record id="gsta">
+      <string id="text" value="Game Status" />
+      <flags id="event_id" value="STAT" />
+    </record>
+
+    <record id="ghof">
+      <string id="text" value="Hall of Fame" />
+      <flags id="event_id" value="FAME" />
+    </record>
+
+    <record>
+      <string id="text" value="Refresh Media Comments[COMMENT reload comments; tree view]" />
+      <flags id="event_id" value="RMCT" />
+    </record>
+
+    <record id="gsvg">
+      <string id="text" value="Save Game" />
+      <flags id="event_id" value="SAVE" />
+    </record>
+
+    <record id="gsva">
+      <string id="text" value="Save Game As..." />
+      <flags id="event_id" value="SAVA" />
+    </record>
+
+    <record>
+      <string id="text" value="Quit Game" />
+      <flags id="event_id" value="QUIT" />
+    </record>
+  </list>
+</record>
