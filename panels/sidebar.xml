@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE panel SYSTEM "http://www.sigames.com/dtds/sios/panel.dtd">
+
+<panel title="sidebar">
+  <!-- <layout class="fit_children_attachment" alignment="horizontal" offset="0"/> -->
+  <layout class="arrange_vertical_attachment" align="top" inset="0" offset="0" gap="0"/>
+  <!-- News Button -->
+  <container height="48">
+    <!-- <layout class="arrange_vertical_attachment" alignment="top" offset="0"/> -->
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true"/>
+    <!-- No news -->
+    <widget class="action_button" id="news" appearance="sidebar/news/no_news" auto_size="all">
+      <layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+      <event id="click_event" event_id="NEWS" event_target="scrn"/>
+      <attachment class="test_global_attachment" get_property="mgru" mode="1" value="0" set_property="hidn"/>
+      <string id="hint" value="No News"/>
+    </widget>
+
+    <!-- News -->
+    <widget class="action_button" id="news" appearance="sidebar/news/news" auto_size="all">
+      <layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+      <event id="click_event" event_id="NEWS" event_target="scrn"/>
+      <attachment class="test_global_attachment" get_property="mgru" mode="0" value="0" set_property="hidn"/>
+      <attachment class="get_global_attachment" get_property="mgru" set_property="hint"/>
+      <string id="hint" value="News"/>
+    </widget>
+  </container>
+</panel>
