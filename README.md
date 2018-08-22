@@ -39,6 +39,11 @@ no mode attribute equals mode="0"
 #### Hide if no subtitle
     <attachment class="test_global_attachment" get_property="subt" skip_if_null="false" set_property="hidn"/>
 
+#### Hide if no news
+    <attachment class="test_global_attachment" get_property="mgru" mode="0" value="0" set_property="hidn"/>
+
+#### Hide if news
+    <attachment class="test_global_attachment" get_property="mgru" mode="1" value="0" set_property="hidn"/>
 
 ## Layout attributes
 Layouting FM elements is a tricky part of skinning. There are numerous of layout classes and some are more common than others. Here are the ones I've found and a little explanation of each.
