@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE panel SYSTEM "http://www.sigames.com/dtds/sios/panel.dtd">
+
+<panel title="title">
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" layout_children="true"/>
+  <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0"/>
+  <layout class="arrange_vertical_attachment" layout="34" gap="0" />
+
+  <container id="tita">
+    <layout class="centre_in_parent_attachment" alignment="vertical" offset="0" inset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" />
+
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="16" layout_children="true"/>
+    <layout class="arrange_vertical_attachment" layout="-1,12" gap="-6" />
+
+    <!-- title area -->
+    <widget class="text" id="sect" standard_spec="title,large" autosize="horizontal" alignment="left" size="14">
+      <layout class="stick_to_sides_attachment" alignment="top" offset="0" inset="0"/>
+      <attachment class="get_global_attachment" get_property="titl" set_property="text"/>
+      <attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
+    </widget>
+
+    <!-- subtitle area -->
+    <widget class="text" id="subs" standard_spec="text" mlti="false" auto_size="all" alignment="left" size="8">
+      <layout class="stick_to_sides_attachment" alignment="bottom" offset="0" inset="0"/>
+      <string id="capitalization" value="upper case"/>
+
+      <!-- hide when no subtitle -->
+      <attachment class="test_global_attachment" get_property="subt" skip_if_null="false" set_property="hidn"/>
+
+      <attachment class="get_global_attachment" get_property="subt" set_property="text"/>
+      <attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
+    </widget>
+  </container>
+</panel>

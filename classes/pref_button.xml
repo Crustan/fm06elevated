@@ -10,5 +10,5 @@
     <flags id="auto_size" value="horizontal"/>
     <boolean id="fixed" value="true"/>
     <boolean id="dont_set_selection" value="true"/>
-    <flags id="style" value="embossed"/>
+    <flags id="style" value="none"/>
 </class>

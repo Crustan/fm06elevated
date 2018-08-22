@@ -16,7 +16,7 @@
 		<layout class="arrange_horizontal_attachment" layout="48,1,-1" offset="0" inset="0" gap="1"/>
 
 		<!-- Sidebar -->
-		<container class="bordered_box" appearance="sidebar/sidebar">
+		<container class="bordered_box" appearance="sidebar/sidebar" file="sidebar">
 			<!-- Hide on intro -->
 			<attachment class="test_global_attachment" get_property="scid" value="2" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
 

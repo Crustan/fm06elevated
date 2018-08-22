@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE panel SYSTEM "http://www.sigames.com/dtds/sios/panel.dtd">
+
+<panel title="logo">
+  <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" layout_children="true"/>
+
+  <!-- Hide if no logo -->
+  <attachment class="test_global_attachment" get_property="mnpc" skip_if_null="false" set_property="hidn"/>
+
+  <widget class="picture" id="logo" auto_size="all">
+    <layout class="centre_in_parent_attachment" alignment="all" offset="0" inset="0"/>
+    <!-- Get logo -->
+    <attachment class="get_global_attachment" get_property="mnpc" set_property="file" skip_if_null="false"/>
+    <!-- Hide if Match -->
+    <attachment class="test_global_attachment" get_property="scid" value="22" set_property="hidn" skip_if_null="false" />
+  </widget>
+</panel>
