@@ -1,0 +1,888 @@
+<panel title="Team Squad Panel">
+
+  <boolean id="save_current_state" value="true"/>
+
+  <layout class="stick_to_sides_attachment" alignment="all" layout_children="true" inset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+
+  <!-- main area -->
+  <container class="group_box" id="main">
+    <layout class="arrange_horizontal_attachment" alignment="right, extend" offset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="vertical" layout_children="true" inset="0"/>
+
+    <container class="titled_box" id="plti" title="Players" alignment="left">
+      <layout class="arrange_vertical_attachment" alignment="top, extend" offset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true" inset="0"/>
+
+      <!-- buttons area -->
+      <container class="group_box" id="btna" embed_in_frame="true">
+        <layout class="arrange_horizontal_attachment" alignment="right" gap="8" embed_in_frame="true"/>
+        <layout class="stick_to_sides_attachment" alignment="top,right" inset="0" layout_children="true" embed_in_frame="true"/>
+
+        <layout class="stick_to_sides_attachment" alignment="top,right" embed_in_frame="true" inset="3"/>
+
+        <layout class="fit_children_attachment" alignment="vertical" offset="0" embed_in_frame="true"/>
+        <layout class="fit_children_attachment" alignment="horizontal,fill" gap="8" embed_in_frame="true"/>
+
+        <!-- player view menu -->
+        <widget class="embedded_popup_button" id="plvi" text="View" sele="plcv" auto_size="horizontal" fixed="true" tkex="true" embed_in_frame="true">
+
+          <boolean id="save_default_state" value="true"/>
+
+          <list id="items">
+
+            <!-- This view will show the player unique IDs in a list (visible if 'show unique id' preference set) -->
+            <record id="unid">
+              <boolean id="hidden" value="true" />
+              <string id="name" value="Unique IDs" />
+
+              <record id="view">
+                <flags id="duni"/>
+                <!-- unique id -->
+                <flags id="Pnam"/>
+                <!-- name -->
+                <flags id="Pclb"/>
+                <!-- person club -->
+                <flags id="Pnat"/>
+                <!-- nationality -->
+                <flags id="Pdva"/>
+                <!-- value -->
+              </record>
+
+
+              <record id="table_properties">
+                <integer id="block_count" value="1" />
+              </record>
+            </record>
+
+            <record id="geni">
+
+              <string id="name" value="General Info"/>
+              <!-- Define attributes/properties to view in this view type on the panel.
+								 Any properties not defined here will be hidden for this view. -->
+              <record id="view">
+                <flags id="Ppkd"/>
+                <!-- picked info -->
+                <flags id="Pnfo"/>
+                <!-- player status/info -->
+                <flags id="Pnam"/>
+                <!-- person name -->
+                <flags id="Ppos"/>
+                <!-- position -->
+                <flags id="Pclb"/>
+                <!-- person club -->
+                <flags id="Pnat"/>
+                <!-- person nationality -->
+                <flags id="Phei"/>
+                <!-- height -->
+                <flags id="Pwei"/>
+                <!-- weight -->
+                <flags id="Page"/>
+                <!-- person age -->
+                <flags id="Pdva"/>
+                <!-- player value -->
+              </record>
+
+              <record id="table_properties">
+                <integer id="block_count" value="1" />
+              </record>
+            </record>
+
+            <record id="ctrt">
+              <string id="name" value="Contract"/>
+              <record id="view">
+                <flags id="Ppkd"/>
+                <!-- picked info -->
+                <flags id="Pnfo"/>
+                <!-- player status/info -->
+                <flags id="Pnam"/>
+                <!-- person name -->
+                <flags id="Psnu"/>
+                <!-- squad number -->
+                <flags id="Pccs"/>
+                <!-- squad status -->
+                <flags id="Pcif"/>
+                <!-- full time or part-time contract -->
+                <flags id="Pcww"/>
+                <!-- weekly wage -->
+                <flags id="Pced"/>
+                <!-- contract expiry -->
+                <!-- <flags id="Pcpr"/> - protected -->
+                <flags id="Pdva"/>
+                <!-- value -->
+              </record>
+
+              <record id="table_properties">
+                <integer id="block_count" value="1" />
+              </record>
+            </record>
+
+            <record id="ctof">
+              <string id="name" value="Contract Offers[COMMENT - team squad view showing details of contract offers to players]"/>
+              <record id="view">
+                <flags id="Ppkd"/>
+                <!-- picked info -->
+                <flags id="Pnfo"/>
+                <!-- player status/info -->
+                <flags id="Pnam"/>
+                <!-- person name -->
+                <flags id="Pcww"/>
+                <!-- weekly wage -->
+                <flags id="Pced"/>
+                <!-- contract expiry -->
+                <flags id="Pcif"/>
+                <!-- full time or part-time contract -->
+                <!-- <flags id="Pcpr"/> - protected -->
+                <flags id="Pwof"/>
+                <!-- contract wage offered -->
+                <flags id="Pcof"/>
+                <!-- contract offered (date) -->
+                <flags id="Pdva"/>
+                <!-- value -->
+              </record>
+
+              <record id="table_properties">
+                <integer id="block_count" value="1" />
+              </record>
+            </record>
+
+            <record id="trnf">
+              <string id="name" value="Transfer"/>
+              <record id="view">
+                <flags id="Ppkd"/>
+                <!-- picked info -->
+                <flags id="Pnfo"/>
+                <!-- player status/info -->
+                <flags id="Pnam"/>
+                <!-- person name -->
+                <flags id="Pcoo"/>
+                <!-- transfer options -->
+                <flags id="Pctr"/>
+                <!-- transfer status -->
+                <flags id="Pcls"/>
+                <!-- loan status -->
+                <flags id="Pdva"/>
+                <!-- value -->
+              </record>
+
+              <record id="table_properties">
+                <integer id="block_count" value="1" />
+              </record>
+            </record>
+
+            <record id="info">
+              <string id="name" value="Full Player Status[COMMENT: player full status information: heading]"/>
+              <record id="view">
+                <flags id="Ppkd"/>
+                <!-- picked info -->
+                <flags id="Pnfo"/>
+                <!-- player status/info -->
+                <flags id="Pnam"/>
+                <!-- person name -->
+                <flags id="Pnfa"/>
+                <!-- full player status/info -->
+                <flags id="Pdva"/>
+                <!-- value -->
+              </record>
+
+              <record id="table_properties">
+                <integer id="block_count" value="1" />
+              </record>
+            </record>
+
+            <record id="----" />
+
+            <record id="sltn">
+              <string id="name" value="Selection"/>
+              <record id="view">
+                <flags id="Ppkd"/>
+                <!-- picked info -->
+                <flags id="Pnfo"/>
+                <!-- player status/info -->
+                <flags id="Pnam"/>
+                <!-- person name -->
+                <flags id="Ppos"/>
+                <!-- position -->
+                <flags id="Pmor"/>
+                <!-- player morale -->
+                <flags id="Pfrm"/>
+                <!-- player form -->
+                <flags id="Pcon"/>
+                <!-- player condition -->
+                <flags id="Poap"/>
+                <!-- overall appearances -->
+                <flags id="Pogl"/>
+                <!-- overall goals -->
+                <flags id="Poas"/>
+                <!-- overall assists -->
+                <flags id="Poav"/>
+                <!-- overall average rating -->
+              </record>
+
+              <record id="table_properties">
+                <integer id="block_count" value="1" />
+              </record>
+            </record>
+
+            <record id="inju">
+              <string id="name" value="Injuries[COMMENT: squad list view menu, injuries menu item label]"/>
+              <record id="view">
+                <flags id="Ppkd"/>
+                <!-- picked info -->
+                <flags id="Pnfo"/>
+                <!-- player status/info -->
+                <flags id="Pnam"/>
+                <!-- person name -->
+                <flags id="Ppos"/>
+                <!-- position -->
+                <flags id="Pinj"/>
+                <!-- player injury -->
+                <flags id="Pconw"/>
+                <!-- player injury -->
+                <flags id="Pida"/>
+                <!-- player injured date-->
+                <flags id="Pito"/>
+                <!-- player injury time out -->
+                <flags id="Pcon"/>
+                <!-- player condition -->
+              </record>
+
+              <record id="table_properties">
+                <integer id="block_count" value="1" />
+              </record>
+            </record>
+
+            <record id="sest">
+              <string id="name" value="Stats"/>
+              <record id="view">
+                <flags id="Ppkd"/>
+                <!-- picked info -->
+                <flags id="Pnfo"/>
+                <!-- player status/info -->
+                <flags id="Pnam"/>
+                <!-- person name -->
+                <flags id="Poap"/>
+                <!-- overall appearances -->
+                <flags id="Pogl"/>
+                <!-- player overall goals -->
+                <flags id="Poas"/>
+                <!-- overall assists -->
+                <flags id="Pomo"/>
+                <!-- overall man of match -->
+                <flags id="Popa"/>
+                <!-- overall pass completion ratio -->
+                <flags id="Pota"/>
+                <!-- overall tackles per game ratio -->
+                <flags id="Podr"/>
+                <!-- overall dribbles per game ratio -->
+                <flags id="Post"/>
+                <!-- overall shots on target ratio -->
+                <flags id="Poav"/>
+                <!-- overall average rating -->
+              </record>
+
+              <record id="table_properties">
+                <integer id="block_count" value="1" />
+              </record>
+            </record>
+
+            <record id="inca">
+              <string id="name" value="International"/>
+              <record id="view">
+                <flags id="Ppkd"/>
+                <!-- picked info -->
+                <flags id="Pnfo"/>
+                <!-- player status/info -->
+                <flags id="Pnam"/>
+                <!-- person name -->
+                <flags id="Pclb"/>
+                <!-- person club -->
+                <flags id="Pnat"/>
+                <!-- person nationality -->
+                <flags id="Piap"/>
+                <!-- player int apps -->
+                <flags id="Pigl"/>
+                <!-- player int goals -->
+                <flags id="Puia"/>
+                <!-- player int u21 apps -->
+                <flags id="Puig"/>
+                <!-- player int u21 goals -->
+                <flags id="Pdva"/>
+                <!-- value -->
+              </record>
+
+              <record id="table_properties">
+                <integer id="block_count" value="1" />
+              </record>
+            </record>
+
+            <record id="----"/>
+
+            <record id="phat">
+              <string id="name" value="Physical"/>
+              <record id="view">
+                <flags id="Ppkd"/>
+                <!-- picked info -->
+                <flags id="Pnfo"/>
+                <!-- player status/info -->
+                <flags id="Pnam"/>
+                <!-- person name -->
+                <flags id="Pacc"/>
+                <!-- (p) acceleration -->
+                <flags id="Pagi"/>
+                <!-- (p) agility -->
+                <flags id="Pbal"/>
+                <!-- (p) balance -->
+                <flags id="Pjum"/>
+                <!-- (p) jumping -->
+                <flags id="Pnft"/>
+                <!-- (p) natural fitness -->
+                <flags id="Ppac"/>
+                <!-- (p) pace -->
+                <flags id="Psta"/>
+                <!-- (p) stamina -->
+                <flags id="Pstr"/>
+                <!-- (p) strength -->
+                <flags id="Pwkr"/>
+                <!-- (m) work rate -->
+              </record>
+
+              <record id="table_properties">
+                <integer id="block_count" value="1" />
+              </record>
+            </record>
+
+            <record id="meat">
+              <string id="name" value="Mental"/>
+              <record id="view">
+                <flags id="Ppkd"/>
+                <!-- picked info -->
+                <flags id="Pnfo"/>
+                <!-- player status/info -->
+                <flags id="Pnam"/>
+                <!-- person name -->
+                <flags id="Pagg"/>
+                <!-- (m) aggression -->
+                <flags id="Pant"/>
+                <!-- (m) anticipation -->
+                <flags id="Pbra"/>
+                <!-- (m) bravery -->
+                <flags id="Pcmp"/>
+                <!-- (m) composure -->
+                <flags id="Pcnt"/>
+                <!-- (m) concentration -->
+                <flags id="Pdec"/>
+                <!-- (m) decisions -->
+                <flags id="Pdet"/>
+                <!-- (m) determination -->
+                <flags id="Pinf"/>
+                <!-- (m) influence -->
+                <flags id="Ptwr"/>
+                <!-- (m) teamwork -->
+              </record>
+
+              <record id="table_properties">
+                <integer id="block_count" value="1" />
+              </record>
+            </record>
+
+            <record id="teat">
+              <string id="name" value="Technical"/>
+              <record id="view">
+                <flags id="Ppkd"/>
+                <!-- picked info -->
+                <flags id="Pnfo"/>
+                <!-- player status/info -->
+                <flags id="Pnam"/>
+                <!-- person name -->
+                <flags id="Pcre"/>
+                <!-- (m) creativity -->
+                <flags id="Pcor"/>
+                <!-- (t) corner taking -->
+                <flags id="Pfla"/>
+                <!-- (m) flair -->
+                <flags id="Pfrk"/>
+                <!-- (t) free kick taking -->
+                <flags id="Phea"/>
+                <!-- (t) heading -->
+                <flags id="Plth"/>
+                <!-- (t) long throws -->
+                <flags id="Ppsn"/>
+                <!-- (m) positioning -->
+                <flags id="Potb"/>
+                <!-- (m) off the ball -->
+                <flags id="Ppen"/>
+                <!-- (t) penalty taking -->
+                <flags id="Ptec"/>
+                <!-- (t) technique -->
+              </record>
+
+              <record id="table_properties">
+                <integer id="block_count" value="1" />
+              </record>
+            </record>
+
+
+            <record id="----" />
+
+            <record id="goat">
+              <string id="name" value="Goalkeeping"/>
+              <record id="view">
+                <flags id="Ppkd"/>
+                <!-- picked info -->
+                <flags id="Pnfo"/>
+                <!-- player status/info -->
+                <flags id="Pnam"/>
+                <!-- person name -->
+                <flags id="Paab"/>
+                <!-- aerial ability -->
+                <flags id="Pcoa"/>
+                <!-- command of area -->
+                <flags id="Pcom"/>
+                <!-- communication -->
+                <flags id="Pecc"/>
+                <!-- eccentricity -->
+                <flags id="Phan"/>
+                <!-- handling -->
+                <flags id="Pkic"/>
+                <!-- kicking -->
+                <flags id="Pooo"/>
+                <!-- one on ones -->
+                <flags id="Pref"/>
+                <!-- reflexes -->
+                <flags id="Prou"/>
+                <!-- rushing out -->
+                <flags id="Pttp"/>
+                <!-- tendency to punch -->
+                <flags id="Pthr"/>
+                <!-- throwing -->
+              </record>
+
+              <record id="table_properties">
+                <integer id="block_count" value="1" />
+              </record>
+            </record>
+
+            <record id="deat">
+              <string id="name" value="Defensive"/>
+              <record id="view">
+                <flags id="Ppkd"/>
+                <!-- picked info -->
+                <flags id="Pnfo"/>
+                <!-- player status/info -->
+                <flags id="Pnam"/>
+                <!-- person name -->
+                <flags id="Pacc"/>
+                <!-- acceleration -->
+                <flags id="Pant"/>
+                <!-- anticipation -->
+                <flags id="Phea"/>
+                <!-- heading -->
+                <flags id="Pjum"/>
+                <!-- jumping -->
+                <flags id="Pmar"/>
+                <!-- marking -->
+                <flags id="Ppac"/>
+                <!-- pace -->
+                <flags id="Ppsn"/>
+                <!-- positioning -->
+                <flags id="Psta"/>
+                <!-- stamina -->
+                <flags id="Pstr"/>
+                <!-- strength -->
+                <flags id="Ptac"/>
+                <!-- tackling -->
+              </record>
+
+              <record id="table_properties">
+                <integer id="block_count" value="1" />
+              </record>
+            </record>
+
+            <record id="atat">
+              <string id="name" value="Attacking"/>
+              <record id="view">
+                <flags id="Ppkd"/>
+                <!-- picked info -->
+                <flags id="Pnfo"/>
+                <!-- player status/info -->
+                <flags id="Pnam"/>
+                <!-- person name -->
+                <flags id="Pcre"/>
+                <!-- creativity -->
+                <flags id="Pcro"/>
+                <!-- crossing -->
+                <flags id="Pdri"/>
+                <!-- dribbling -->
+                <flags id="Pfrk"/>
+                <!-- free kicks -->
+                <flags id="Pfin"/>
+                <!-- finishing -->
+                <flags id="Pfrs"/>
+                <!-- first touch -->
+                <flags id="Pfla"/>
+                <!-- flair -->
+                <flags id="Plsh"/>
+                <!-- long shots -->
+                <flags id="Potb"/>
+                <!-- off the ball -->
+                <flags id="Ppas"/>
+                <!-- passing -->
+              </record>
+
+              <record id="table_properties">
+                <integer id="block_count" value="1" />
+              </record>
+            </record>
+
+            <record id="----" />
+
+            <record id="shov">
+              <string id="text" value="Overview"/>
+
+              <list id="items">
+                <record id="shpo">
+                  <string id="name" value="Position" />
+                  <record id="view">
+                    <flags id="Ppkd"/>
+                    <!-- picked info -->
+                    <flags id="Pnfo"/>
+                    <!-- player status/info -->
+                    <flags id="Pnam"/>
+                    <!-- person name -->
+                    <flags id="Ppos"/>
+                    <!-- position -->
+                  </record>
+
+                  <record id="table_properties">
+                    <integer id="block_count" value="2" />
+                  </record>
+                </record>
+
+                <record id="shna">
+                  <string id="name" value="Nationality" />
+                  <record id="view">
+                    <flags id="Ppkd"/>
+                    <!-- picked info -->
+                    <flags id="Pnfo"/>
+                    <!-- player status/info -->
+                    <flags id="Pnam"/>
+                    <!-- person name -->
+                    <flags id="Pnat"/>
+                    <!-- nationality -->
+                  </record>
+
+                  <record id="table_properties">
+                    <integer id="block_count" value="2" />
+                  </record>
+                </record>
+
+                <record id="shco">
+                  <string id="name" value="Condition" />
+                  <record id="view">
+                    <flags id="Ppkd"/>
+                    <!-- picked info -->
+                    <flags id="Pnfo"/>
+                    <!-- player status/info -->
+                    <flags id="Pnam"/>
+                    <!-- person name -->
+                    <flags id="Pcon"/>
+                    <!-- condition -->
+                  </record>
+
+                  <record id="table_properties">
+                    <integer id="block_count" value="2" />
+                  </record>
+                </record>
+
+                <record id="shag">
+                  <string id="name" value="Age" />
+                  <record id="view">
+                    <flags id="Ppkd"/>
+                    <!-- picked info -->
+                    <flags id="Pnfo"/>
+                    <!-- player status/info -->
+                    <flags id="Pnam"/>
+                    <!-- person name -->
+                    <flags id="Page"/>
+                    <!-- age -->
+                  </record>
+
+                  <record id="table_properties">
+                    <integer id="block_count" value="2" />
+                  </record>
+                </record>
+
+                <record id="----" />
+
+                <record id="shmo">
+                  <string id="name" value="Morale" />
+                  <record id="view">
+                    <flags id="Ppkd"/>
+                    <!-- picked info -->
+                    <flags id="Pnfo"/>
+                    <!-- player status/info -->
+                    <flags id="Pnam"/>
+                    <!-- person name -->
+                    <flags id="Pmor"/>
+                    <!-- morale -->
+                  </record>
+
+                  <record id="table_properties">
+                    <integer id="block_count" value="2" />
+                  </record>
+                </record>
+
+                <record id="shfo">
+                  <string id="name" value="Form" />
+                  <record id="view">
+                    <flags id="Ppkd"/>
+                    <!-- picked info -->
+                    <flags id="Pnfo"/>
+                    <!-- player status/info -->
+                    <flags id="Pnam"/>
+                    <!-- person name -->
+                    <flags id="Pfrm"/>
+                    <!-- form -->
+                  </record>
+
+                  <record id="table_properties">
+                    <integer id="block_count" value="2" />
+                  </record>
+                </record>
+
+                <record id="shap">
+                  <string id="name" value="Appearances" />
+                  <record id="view">
+                    <flags id="Ppkd"/>
+                    <!-- picked info -->
+                    <flags id="Pnfo"/>
+                    <!-- player status/info -->
+                    <flags id="Pnam"/>
+                    <!-- person name -->
+                    <flags id="Poap"/>
+                    <!-- overall appearances -->
+                  </record>
+
+                  <record id="table_properties">
+                    <integer id="block_count" value="2" />
+                  </record>
+                </record>
+
+                <record id="shgo">
+                  <string id="name" value="Goals" />
+                  <record id="view">
+                    <flags id="Ppkd"/>
+                    <!-- picked info -->
+                    <flags id="Pnfo"/>
+                    <!-- player status/info -->
+                    <flags id="Pnam"/>
+                    <!-- person name -->
+                    <flags id="Pogl"/>
+                    <!-- overall appearances -->
+                  </record>
+
+                  <record id="table_properties">
+                    <integer id="block_count" value="2" />
+                  </record>
+                </record>
+
+                <record id="shav">
+                  <string id="name" value="Average Rating" />
+                  <record id="view">
+                    <flags id="Ppkd"/>
+                    <!-- picked info -->
+                    <flags id="Pnfo"/>
+                    <!-- player status/info -->
+                    <flags id="Pnam"/>
+                    <!-- person name -->
+                    <flags id="Poav"/>
+                    <!-- overall average rating -->
+                  </record>
+
+                  <record id="table_properties">
+                    <integer id="block_count" value="2" />
+                  </record>
+                </record>
+
+                <record id="----" />
+
+                <!-- transfer related simple view -->
+
+                <record id="shto">
+                  <string id="name" value="Transfer Options" />
+                  <record id="view">
+                    <flags id="Ppkd"/>
+                    <!-- picked info -->
+                    <flags id="Pnfo"/>
+                    <!-- player status/info -->
+                    <flags id="Pnam"/>
+                    <!-- person name -->
+                    <flags id="Pcoo"/>
+                    <!-- transfer options -->
+                  </record>
+
+                  <record id="table_properties">
+                    <integer id="block_count" value="2" />
+                  </record>
+                </record>
+
+                <record id="shts">
+                  <string id="name" value="Transfer Status" />
+                  <record id="view">
+                    <flags id="Ppkd"/>
+                    <!-- picked info -->
+                    <flags id="Pnfo"/>
+                    <!-- player status/info -->
+                    <flags id="Pnam"/>
+                    <!-- person name -->
+                    <flags id="Pctr"/>
+                    <!-- transfer status -->
+                  </record>
+
+                  <record id="table_properties">
+                    <integer id="block_count" value="2" />
+                  </record>
+                </record>
+
+                <record id="shls">
+                  <string id="name" value="Loan Status" />
+                  <record id="view">
+                    <flags id="Ppkd"/>
+                    <!-- picked info -->
+                    <flags id="Pnfo"/>
+                    <!-- player status/info -->
+                    <flags id="Pnam"/>
+                    <!-- person name -->
+                    <flags id="Pcls"/>
+                    <!-- loan status -->
+                  </record>
+
+                  <record id="table_properties">
+                    <integer id="block_count" value="2" />
+                  </record>
+                </record>
+
+                <record id="----" />
+
+                <!-- contract related simple view -->
+
+                <record id="shww">
+                  <string id="name" value="Wage" />
+                  <record id="view">
+                    <flags id="Ppkd"/>
+                    <!-- picked info -->
+                    <flags id="Pnfo"/>
+                    <!-- player status/info -->
+                    <flags id="Pnam"/>
+                    <!-- person name -->
+                    <flags id="Pcww"/>
+                    <!-- wage -->
+                  </record>
+
+                  <record id="table_properties">
+                    <integer id="block_count" value="2" />
+                  </record>
+                </record>
+
+                <record id="shss">
+                  <string id="name" value="Squad Status" />
+                  <record id="view">
+                    <flags id="Ppkd"/>
+                    <!-- picked info -->
+                    <flags id="Pnfo"/>
+                    <!-- player status/info -->
+                    <flags id="Pnam"/>
+                    <!-- person name -->
+                    <flags id="Pccs"/>
+                    <!-- squad status -->
+                  </record>
+
+                  <record id="table_properties">
+                    <integer id="block_count" value="2" />
+                  </record>
+                </record>
+
+                <record id="shva">
+                  <string id="name" value="Value" />
+                  <record id="view">
+                    <flags id="Ppkd"/>
+                    <!-- picked info -->
+                    <flags id="Pnfo"/>
+                    <!-- player status/info -->
+                    <flags id="Pnam"/>
+                    <!-- person name -->
+                    <flags id="Pdva"/>
+                    <!-- value -->
+                  </record>
+
+                  <record id="table_properties">
+                    <integer id="block_count" value="2" />
+                  </record>
+                </record>
+
+              </list>
+            </record>
+
+          </list>
+
+          <flags id="slct" value="sltn" />
+        </widget>
+
+        <!-- filter menu -->
+        <widget class="embedded_action_button" id="plsf" clke="plsf" text="Show Filters" auto_size="all" embed_in_frame="true" save_current_state="true"/>
+
+      </container>
+
+      <widget class="picking_panel" id="pkpn" />
+
+      <container class="group_box" id="ptct">
+
+        <layout class="arrange_vertical_attachment" alignment="bottom, extend" offset="0"/>
+        <layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true" inset="0"/>
+
+        <widget class="person_list_table" id="pltb" mode="fill_rows, printable, store_sort_state, drag_rows, drop_on_rows, auto_hide_columns">
+
+          <boolean id="save_default_state" value="true" />
+
+          <!-- default sort by playing position (primary), then picked position, then name -->
+          <list id="default_sort_column">
+            <integer value="Ppos" />
+            <integer value="Pnam" />
+          </list>
+
+        </widget>
+
+        <widget class="team_squad_info_panel" id="tsip" />
+
+      </container>
+
+    </container>    <!-- players titled box -->
+
+    <!-- filter editing panel -->
+    <widget class="filter_panel" id="plfp" width="200">
+
+      <!-- buttons area -->
+      <container class="group_box" id="btnf" embed_in_frame="true">
+
+        <layout class="arrange_horizontal_attachment" alignment="right" embed_in_frame="true"/>
+        <layout class="stick_to_sides_attachment" alignment="top" inset="0" layout_children="true" embed_in_frame="true"/>
+
+        <layout class="stick_to_sides_attachment" alignment="top,right" embed_in_frame="true" inset="3"/>
+
+        <layout class="fit_children_attachment" alignment="vertical" embed_in_frame="true"/>
+        <layout class="fit_children_attachment" alignment="horizontal,fill" embed_in_frame="true"/>
+
+        <!-- filter menu -->
+        <widget class="embedded_action_button" id="plhf" clke="plhf" text="Hide Filters" auto_size="all" embed_in_frame="true" save_current_state="true"/>
+
+      </container>
+
+      <boolean id="hidn" value="true" />
+    </widget>
+
+  </container>  <!-- main area -->
+
+</panel><!-- panel -->
+
