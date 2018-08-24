@@ -47,7 +47,7 @@
 			</container>
 
 			<!-- HEADER RIGHT AREA -->
-			<container>
+			<container>			
 				<layout class="stick_to_sides_attachment" alignment="right,vertical" inset="0" offset="0"/>
 
 				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0" layout_children="true"/>
@@ -128,22 +128,17 @@
 			</container>
 		</container>
 	</container>
+
 	<!-- MATCH HEADER ======================================================================== -->
 	<container id="Mhdr">
 		<attachment class="test_global_attachment" get_property="scid" value="22" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
 
 		<layout class="fit_children_attachment" alignment="vertical" inset="0" offset="0"/>
 		<!-- Inset here should be same width as Header Right -->
-		<layout class="stick_to_sides_attachment" alignment="right" inset="340"/>
+		<layout class="stick_to_sides_attachment" alignment="right" inset="300"/>
 		<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0"/>
 
 		<widget class="match_titlebar_panel"/>
 	</container>
 
-	<!-- SUB HEADER ======================================================================== -->
-	<!-- <container>
-		<widget class="picture" id="pict" auto_size="vertical" file="navigation/titlepanel" cached="true">
-			<layout class="stick_to_sides_attachment" alignment="bottom" inset="0"/>
-		</widget>
-	</container> -->
 </panel>
