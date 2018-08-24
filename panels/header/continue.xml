@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE panel SYSTEM "http://www.sigames.com/dtds/sios/panel.dtd">
+
+<panel title="continue">
+  <widget class="text_button" appearance="navigation/continue_button/button" text="Continue" alignment="centre" size="12" colour="white" inset="0" offset="0">
+    <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" offset="0"/>
+    <record id="click_event" event_id="CONT" event_target="scrn"/>
+
+    <attachment class="test_global_attachment" get_property="cont" set_property="disa">
+      <list id="value">
+        <integer value="-8"/>
+        <integer value="-5"/>
+      </list>
+    </attachment>
+
+    <!-- match play text -->
+    <attachment class="get_global_attachment" get_property="cttx" set_property="text"/>
+  </widget>
+</panel>
