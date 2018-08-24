@@ -2,27 +2,19 @@
 <!DOCTYPE panel SYSTEM "http://www.sigames.com/dtds/sios/panel.dtd">
 
 <panel title="fullscreen" height="38" width="270">
+	<!-- Fullscreen -->
+	<widget class="action_button" appearance="titlebar/max" text="" auto_size="all">
+		<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+		<attachment class="test_global_attachment" get_property="FS  " value="true" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
+		<event id="click_event" event_id="TgFS" event_target="scrn"/>
+	</widget>
 
-
-				   
-			<!-- Fullscreen -->			
-				<widget class="action_button" appearance="titlebar/max" text="" auto_size="all">
-				<layout class="stick_to_sides_attachment" alignment="left" inset="12"/>
-				<layout class="stick_to_sides_attachment" alignment="top" inset="14"/>	
-					<attachment class="test_global_attachment" get_property="FS  " value="true" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-					<event id="click_event" event_id="TgFS" event_target="scrn"/>
-				</widget>
-				
-				<!-- Minimize -->
-				<widget class="action_button" appearance="titlebar/min" text=""  auto_size="all">
-				<layout class="stick_to_sides_attachment" alignment="left" inset="12"/>
-				<layout class="stick_to_sides_attachment" alignment="top" inset="14"/>	
-					<attachment class="test_global_attachment" get_property="FS  " value="true" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-					<event id="click_event" event_id="TgFS" event_target="scrn"/>
-				</widget>   
-
-    
-
-
-
+	<!-- Minimize -->
+	<widget class="action_button" appearance="titlebar/min" text="" auto_size="all">
+		<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
+		<layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+		<attachment class="test_global_attachment" get_property="FS  " value="true" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
+		<event id="click_event" event_id="TgFS" event_target="scrn"/>
+	</widget>
 </panel>
