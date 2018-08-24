@@ -1,0 +1,296 @@
+<!--
+    this file contains a list of all of the sections in the game
+-->
+
+<!-- TO DO
+        adding ndrq="true" after a section item causes it to completely refresh the screen when that
+        section is selected; this is a transitional hack required for some of the older screens, but 
+        eventually, when all the sections are proper panels, we should get rid of it
+-->
+
+<properties>
+  <list id="items">
+
+    <!-- application -->
+    <record id="Asec">
+      <list id="items">
+        <record id="Aint" section="Aint" text="Introduction" help_page="intro"/>
+        <record id="Asgm" section="Asgm" text="New Game" help_page="new_game"/>
+        <record id="Ajgm" section="Ajgm" text="Join Game" help_page="network"/>
+        <record text="Credits" collapsed="true">
+          <list id="items">
+            <record id="Acrd" section="Acrd" text="Development" help_page="dev_credits"/>
+            <record id="Arsc" section="Arsc" text="Research" help_page="res_credits"/>
+          </list>
+        </record>
+        <record id="Acmu" section="Acmu" text="Community" help_page="community_info"/>
+        <record id="Aprf" section="Aprf" text="Preferences" help_page="preferences"/>
+        <record id="Acha" section="Acha" text="Chat Rooms[AOL chatroom option on tree view]"/>
+        <record id="Amts" section="Amts" text="Match Setup[DEBUG option only - do not translate]"/>
+        <record id="Alan" section="Alan" text="Language" hidden="true" />
+      </list>
+    </record>
+
+
+    <!-- game -->
+    <record id="Gsec">
+      <list id="items">
+        <record id="stat" section="stat" text="Status" help_page="options"/>
+        <record id="Gsrh" section="Gsrh" text="Search"/>
+        <record text="Hall Of Fame" collapsed="true">
+          <list id="items">
+            <record id="nthf" section="nthf" text="Nation[COMMENT - Hall of fame section]" help_page="options#hall_of_fame"/>
+            <record id="cthf" section="cthf" text="Continent[COMMENT - Hall of fame section]" help_page="options#hall_of_fame"/>
+            <record id="wwhf" section="wwhf" text="World-wide[COMMENT - Hall of fame section]" help_page="options#hall_of_fame"/>
+            <record id="nlhf" section="nlhf" text="Nationality[COMMENT - Hall of fame section]" help_page="options#hall_of_fame"/>
+          </list>
+        </record>
+        <record id="SC16" section="SC16" text="Manager Chat[COMMENT - Manager Chat Room section]" help_page="options#manager_chat"/>
+        <record id="Gded" section="Gded" text="" />
+        <!-- game demo end section: no text, left hand side is hidden -->
+      </list>
+    </record>
+
+    <!-- continent -->
+    <record id="CTsc">
+      <list id="items">
+        <record id="ctnt" section="ctnt" text="Nations"/>
+        <record id="ctcb" section="ctcb" text="Clubs">
+          <list id="items">
+            <record id="ctcl" section="ctcl" text="Major[COMMENT - major clubs on continent club list screen]"/>
+            <record id="ctac" section="ctac" text="All[COMMENT - league clubs on continent club list screen]"/>
+            <record id="ctav" section="ctav" text="Available[COMMENT - available clubs for managing on continent club list screen]"/>
+          </list>
+        </record>
+        <!-- <record id="cton" section="cton" text=""/>				one nation-->
+        <!-- <record id="ctal" section="ctal" text=""/>				active league clubs-->
+        <!-- <record id="ctac" section="ctac" text=""/>				all clubs-->
+        <record id="ctaw" section="ctaw" text="Awards"/>
+        <record id="SC31" section="SC31" text="Transfers"/>
+      </list>
+    </record>
+
+    <!-- person -->
+    <record id="Psec">
+      <list id="items">
+        <!-- human stuff -->
+        <record id="Phom" section="Phom" text="Home [comment - option on breadcrumbs to take you back to your home screen]" help_page="manager_snapshot"/>
+        <record id="Psnp" section="Phom" text="Snapshot[COMMENT: manager home section name]" help_page="manager_snapshot"/>
+        <record id="Pnws" section="Pnws" text="News" help_page="news"/>
+        <record id="Pjbs" section="Pjbs" text="Jobs">
+          <boolean id="collapsed" value="true" />
+          <list id="items">
+            <record id="Pjjc" section="Pjjc" text="Job Centre" ndrq="true" help_page="job_centre"/>
+            <record id="Pjjs" section="Pjjs" text="Job Security" ndrq="true" help_page="job_security"/>
+          </list>
+        </record>
+        <record id="Pnot" section="Pnot" text="Notebook" help_page="notebook"/>
+        <record id="Pcnf" section="Pcnf" text="Confidence" help_page="confidence"/>
+        <record id="Pscf" section="Pscf" text="Confidence" help_page="confidence">
+          <boolean id="collapsed" value="true"/>
+          <list id="items">
+            <record id="Pccf" section="Pccf" text="Club"/>
+            <record id="Pncf" section="Pncf" text="Nation"/>
+          </list>
+        </record>
+        <record id="Psho" section="Psho" text="Shortlist" ndrq="true" help_page="search_shortlist"/>
+        <!-- human shortlist -->
+
+        <!-- stats -->
+        <record id="Pply" section="Pply" text="Profile" ndrq="true" help_page="player#profile"/>
+        <record id="Pnpl" section="Pnpl" text="Profile" ndrq="true" help_page="profile"/>
+        <record id="Psof" section="Psof" text="Profile" ndrq="true"/>
+        <record id="Ppl1" section="Ppl1" text="Player Profile" ndrq="true" help_page="player#profile"/>
+        <record id="Pnp1" section="Pnp1" text="Staff Profile" ndrq="true" help_page="profile"/>
+        <record id="Ppin" section="Ppin" text="Personal" ndrq="true" help_page="player#personal_player"/>
+        <record id="Ptin" section="Ptin" text="Transfer[COMMENT: left menu of a player]" ndrq="true" help_page="player"/>
+        <record id="Pspo" section="Pspo" text="Positions" ndrq="true" help_page="player.htm#positions"/>
+        <record id="Pmin" section="Pmin" text="Information" ndrq="true"/>
+        <record id="Pfrm" section="Pfrm" text="Form[COMMENT - Player form sub option on person screen]" ndrq="true" help_page="form"/>
+        <record id="Psta" section="Psta" text="Stats" ndrq="true" help_page="player_stats"/>
+        <record id="Ptrc" section="Ptrc" text="Training[COMMENT; training section of player profile]" help_page="training_overview">
+          <list id="items">
+            <record id="Ptra" section="Ptra" text="Overview[COMMENT; training overview section of player profile]" help_page="player#player_training_overview"/>
+            <record id="PHat" section="PHat" text="Attributes[COMMENT: menu of a player history]" help_page="player#player_training_attributes"/>
+            <record id="PHdb" section="PHdb" text="Debug[COMMENT: NOT FOR TRANSLATION]"/>
+          </list>
+        </record>
+        <record id="Pscl" section="Pscl" text="Scouted Players" ndrq="true"/>
+        <record id="Ptrp" section="Ptrp" text="Team Report" ndrq="true" help_page="team_report"/>
+        <record id="SC44" section="SC44" text="Notes" help_page="notebook"/>
+        <record id="SC55" section="SC55" text="Friendly Instructions" />
+        <record id="Pcmp" text="Comparison">
+          <boolean id="collapsed" value="true" />
+          <list id="items">
+            <record id="PcAt" section="PcAt" text="Attributes" ndrq="true" help_page="player#comparison"/>
+            <record id="PcOv" section="PcOv" text="Overview" ndrq="true" help_page="player#comparison"/>
+          </list>
+        </record>
+        <record id="SC60" section="SC60" text="Conflict" />
+        <record id="SC20" section="SC20" text="Contract Offer" help_page="offer_new_contract"/>
+        <record id="S19A" section="S19A" text="Transfer Offer" help_page="make_an_offer"/>
+        <record id="S19B" section="S19B" text="Transfer Offer" help_page="offer_to_clubs"/>
+        <record id="SC27" section="SC27" text="Transfer Status" help_page="set_transfer_status"/>
+        <record id="SC64" section="SC64" text="Release Comment" help_page="release_comment"/>
+        <record id="SC66" section="SC66" text="Injury Response" />
+        <record id="SC76" section="SC76" text="Release Comment" help_page="release_comment"/>
+        <record id="SC49" section="SC49" text="Release Comment" help_page="release_comment"/>
+
+        <record id="Phis" section="Phis" text="History" collapsed="true">
+          <list id="items">
+            <record id="PHst" section="PHst" text="Career Stats" ndrq="true" help_page="player#history"/>
+            <record id="PHac" section="PHac" text="Achievements" ndrq="true" help_page="player#history"/>
+            <record id="PHin" section="PHin" text="Injuries" ndrq="true" help_page="player#history"/>
+            <record id="PHme" section="PHme" text="Media[COMMENT: left menu of a player history]" ndrq="true"/>
+          </list>
+        </record>
+
+        <record id="Pdbg" section="Pdbg" text="Debug" ndrq="true"/>
+      </list>
+    </record>
+
+    <!-- team -->
+    <record id="Tsec">
+      <list id="items">
+        <record id="tcsp" section="tcsp" text="Staff" ndrq="false" help_page="squad_menu#staff"/>
+        <record id="ttrp" section="ttrp" text="Training" collapsed="true">
+          <list id="items">
+            <record id="ttsp" section="ttsp" text="Players[COMMENT - team screen section; training section; players sub section]" ndrq="true" help_page="training_players"/>
+            <record id="ttch" section="ttch" text="Coaches" ndrq="true" help_page="training_coaches"/>
+            <record id="tcth" section="tcth" text="Extended Leave[COMMENT - team screen section; training section; holiday instructions sub section]"/>
+          </list>
+        </record>
+        <record id="tctp" section="tctp" text="Transfers" ndrq="true" help_page="transfers"/>
+        <record id="tcip" section="tcip" text="Information" ndrq="false" help_page="club_info"/>
+
+        <record id="tcfp" section="tcfp" text="Finances" collapsed="true" help_page="finances">
+          <list id="items">
+            <record id="tcfm" section="tcfm" text="Summary" ndrq="true" help_page="finances#summary"/>
+            <record id="tcfi" section="tcfi" text="Income" ndrq="true" help_page="finances#income"/>
+            <record id="tcfe" section="tcfe" text="Expenditure" ndrq="true" help_page="finances#expenditure"/>
+            <record id="tcfs" section="tcfs" text="Salary[COMMENT: finances section of tree view; translate as Salaries]" ndrq="true" help_page="finances#salary"/>
+            <record id="tcft" section="tcft" text="Transfers" ndrq="true" help_page="finances#transfers"/>
+          </list>
+        </record>
+
+        <record id="tsrh" section="tsrh" text="Search">
+          <boolean id="collapsed" value="true" />
+          <list id="items">
+            <record id="srsh" section="srsh" text="Shortlist" ndrq="false" help_page="search_shortlist"/>
+            <record id="srpl" section="srpl" text="Players" ndrq="false" help_page="search_players"/>
+            <record id="srst" section="srst" text="Staff" ndrq="false" help_page="search_staff"/>
+            <record id="srsc" section="srsc" text="Scouting" ndrq="false" help_page="search_scouting"/>
+          </list>
+        </record>
+        <record id="tcnp" section="tcnp" text="National Pool" ndrq="true"/>
+        <record id="tccl" section="tccl" text="Clubs"/>
+        <record id="tcaw" section="tcaw" text="Awards"/>
+
+        <record id="csrc" section="csrc" text="History" collapsed="true">
+          <list id="items">
+            <record id="cmps" section="cmps" text="Competitions" ndrq="true" help_page="history_club" />
+            <record id="ldmk" section="ldmk" text="Landmarks" ndrq="true" help_page="history_club"/>
+            <record id="recs" section="recs" text="Records" ndrq="true" help_page="history_club"/>
+            <record id="lgps" section="lgps" text="League Positions" ndrq="true" help_page="history_club"/>
+            <record id="atts" section="atts" text="Attendances" ndrq="true" help_page="history_club"/>
+            <record id="resu" section="resu" text="Results" ndrq="true" help_page="history_club"/>
+            <record id="seqs" section="seqs" text="Sequences" ndrq="true" help_page="history_club"/>
+            <record id="plrs" section="plrs" text="Players" ndrq="true" help_page="history_club"/>
+            <record id="trns" section="trns" text="Transfers" ndrq="true" help_page="history_club"/>
+          </list>
+        </record>
+        <record id="tcpm" section="tcpm" text="Past Meetings" help_page="fixtures"/>
+        <record id="SC55" section="SC55" text="Friendly Instructions"/>
+        <record id="mnop" section="mnop" text="Manager Options" help_page="manager_options"/>
+        <record id="tcdp" section="tcdp" text="Debug Panel" />
+      </list>
+    </record>
+
+    <!-- squad -->
+    <record id="Ssec" collapsed="true">
+      <list id="items">
+        <record id="*spn" section="*spn" text="Players" ndrq="true" help_page="squad_menu"/>
+        <record id="*tpn" section="*tpn" text="Tactics" ndrq="true" help_page="tactics"/>
+        <record id="*mtp" section="*mtp" text="Tactics" ndrq="true" help_page="tactics"/>
+        <record id="*mtt" section="*mtt" text="Team Talk[COMMENT - team talk section on team screen]" ndrq="true" help_page="team_talks"/>
+        <record id="*fpn" section="*fpn" text="Fixtures" ndrq="true" help_page="fixtures" />
+      </list>
+    </record>
+
+    <!-- competition -->
+    <record id="Csec">
+      <list id="items">
+        <record id="cslt" section="cslt" text="League Table[COMMENT - competition stage panel: title for league table]" help_page="league_comp"/>
+        <record id="cssp" section="cssp" text="Stages" help_page="world"/>
+        <record id="cstf" section="cstf" text="Today's Fixtures">
+          <boolean id="collapsed" value="true"/>
+          <list id="items">
+            <record id="csls" section="csls" text="Latest Scores" />
+            <record id="csgu" section="csgu" text="Goal Updates" />
+            <record id="csll" section="csll" text="Live League Table" />
+          </list>
+        </record>
+        <record id="csdf" section="csdf" text="Draft"/>
+        <record id="csfp" section="csfp" text="Fixtures &amp; Results" help_page="fixtures_results" />
+        <record id="cssc" section="cssc" text="Schedule" help_page="world"/>
+        <record id="csqu" section="csqu" text="Qualifiers" help_page="world"/>
+        <record id="csue" section="csue" text="Coefficients" help_page="world">
+          <boolean id="collapsed" value="true"/>
+          <list id="items">
+            <record id="cscl" section="cscl" text="Club" help_page="world"/>
+            <record id="csnt" section="csnt" text="Nation" help_page="world"/>
+          </list>
+        </record>
+        <record id="csfa" section="csfa" text="Sportsmanship[COMMENT - Uefa fair play section on competition screen]" />
+        <record id="csff" section="csff" text="World Rankings" help_page="world"/>
+        <record id="cssd" section="cssd" text="Seedings" help_page="world"/>
+        <record id="csav" section="csav" text="Average Points" help_page="world"/>
+        <record id="cste" section="cste" text="Team Stats" help_page="team_stats" />
+        <record id="cspl" section="cspl" text="Player Stats" help_page="player_stats" />
+        <record id="cawa" section="cawa" text="Awards" help_page="awards" />
+        <record id="csrt" section="csrt" text="Referee Stats" />
+        <record id="csin" section="csin" text="Injury Table" />
+        <record id="csrc" section="csrc" text="History">
+          <boolean id="collapsed" value="true"/>
+          <list id="items">
+            <record id="csmp" section="csmp" text="Summary" help_page="history_league"/>
+            <record id="cshi" section="cshi" text="Past Winners" help_page="history_league" />
+            <record id="cdfh" section="cdfh" text="Drafts" help_page="history_league" />
+            <record id="catp" section="catp" text="Attendances" help_page="history_league" />
+            <record id="crsp" section="crsp" text="Results" help_page="history_league" />
+            <record id="csqp" section="csqp" text="Sequences" help_page="history_league" />
+            <record id="ctmp" section="ctmp" text="Teams" help_page="history_league" />
+            <record id="cplp" section="cplp" text="Players" help_page="history_league" />
+          </list>
+        </record>
+        <record id="cslp" section="cslp" text="Past Positions" />
+        <record id="csrk" section="csrk" text="Rankings" />
+        <record id="cctp" section="cctp" text="Cont. Teams[COMMENT: comp_stats heading]" />
+      </list>
+    </record>
+
+    <!-- fixture -->
+    <record id="Fsec">
+      <list id="items">
+        <record id="mpmp" section="mpmp" text="Preview" help_page="match_day#preview"/>
+        <record id="bmin" section="bmin" text="Overview" help_page="match_day#live"/>
+        <record id="mtst" section="mtst" text="Match Stats" help_page="match_day#match_stats"/>
+        <record id="mazp" section="mazp" text="Action Zones" help_page="match_day#action_zones"/>
+        <record id="hilg" section="hilg" text="Pitch" help_page="match_day#pitch"/>
+        <record id="mtrp" section="mtrp" text="Report" help_page="match_day#report"/>
+        <record id="hfms" section="hfms" text="Home Stats" help_page="match_day#performance"/>
+        <record id="afms" section="afms" text="Away Stats" help_page="match_day#performance"/>
+        <record id="bmts" section="bmts" text="Player Ratings" help_page="match_day#stats"/>
+        <record id="bmfs" section="bmfs" text="Formations[COMMENT - match screen; formations panel title]" help_page="match_day#formations"/>
+        <record id="mlsp" section="mlsp" text="Latest Scores" help_page="match_day#latest_scores"/>
+        <record id="mgup" section="mgup" text="Goal Updates" help_page="match_day#latest_scores"/>
+        <record id="mltp" section="mltp" text="League Table" help_page="match_day#league_tables"/>
+        <record id="mpst" section="mpst" text="Post Match" help_page="match_day#post_match"/>
+        <record id="mpdl" section="mpdl" text="Split View" help_page="match_day#split_view"/>
+        <record id="tact" section="tact" text="Tactics" help_page="tactics"/>
+      </list>
+    </record>
+
+  </list>
+
+</properties>
