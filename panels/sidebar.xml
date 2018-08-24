@@ -4,6 +4,23 @@
 <panel title="sidebar">
   <!-- <layout class="fit_children_attachment" alignment="horizontal" offset="0"/> -->
   <layout class="arrange_vertical_attachment" align="top" inset="0" offset="0" gap="0"/>
+
+  <container id="ZDr1" height="48">
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+    <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" layout_children="true"/>
+    <widget class="action_button" appearance="sidebar/home/home" auto_size="all">
+      <layout class="stick_to_sides_attachment" alignment="top" inset="0"/>
+      <event id="click_event">
+        <flags id="event_id" value="Phom"/>
+        <flags id="event_target" value="scrn"/>
+      </event>
+      <!-- <event id="click_event" event_target="Psnp"/>
+      <record id="Phom" section="Phom"/> -->
+      <string id="hint" value="Home"/>
+    </widget>
+  </container>
+
+
   <!-- News Button -->
   <container height="48">
     <!-- <layout class="arrange_vertical_attachment" alignment="top" offset="0"/> -->
