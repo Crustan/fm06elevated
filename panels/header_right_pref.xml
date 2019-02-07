@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE panel SYSTEM "http://www.sigames.com/dtds/sios/panel.dtd">
+
+<panel title="header_right_pref">
+  <layout class="stick_to_sides_attachment" alignment="right,vertical" inset="0" offset="0"/>
+  <layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0" layout_children="true"/>
+  <layout class="arrange_horizontal_attachment" offset="0" inset="0" layout="-1,70,91" gap="0"/>
+
+  <container>
+    <!-- STRETCHING DUMMY CONTAINER  -->
+  </container>
+
+  <!-- World menu -->
+  <container file="header/world menu" />
+
+  <!-- Pref menu -->
+  <widget class="pref_button">
+    <record id="items" file="menus/game"/>
+    <string id="hint" value="Options"/>
+  </widget>
+</panel>

@@ -11,6 +11,8 @@
 	<!-- STANDARD HEADER ======================================================================== -->
 	<container id="NHdr" height="56">
 		<layout class="stick_to_sides_attachment" alignment="all" inset="0" layout_children="true"/>
+
+		<!-- TODO: Find out what value 0 means here -->
 		<attachment class="test_global_attachment" get_property="scid" value="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
 
 		<!-- Panel graphic - COLOUR -->
@@ -48,30 +50,24 @@
 
 			<!-- HEADER RIGHT AREA -->
 			<container>
-				<layout class="stick_to_sides_attachment" alignment="right,vertical" inset="0" offset="0"/>
+				<layout class="stick_to_sides_attachment" alignment="right, vertical" inset="0" offset="0" />
 
 				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0" layout_children="true"/>
-				<layout class="arrange_horizontal_attachment" offset="0" inset="0" layout="-1,70,91,100,140" gap="0"/>
-				<container>
-					<!-- STRETCHING DUMMY CONTAINER  -->
+				<!-- <layout class="arrange_horizontal_attachment" offset="0" inset="0" layout="-1" gap="0" /> Replaced with ↓-->
+				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" layout_children="true"/>
+				
+				<!-- Show on prefences  -->
+				<container file="header_right_pref">
+					<attachment class="test_global_attachment" get_property="scid" value="23" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>	
 				</container>
 
-				<!-- World menu -->
-				<container file="header/world menu" />
-
-				<!-- Pref menu -->
-				<widget class="pref_button">
-					<record id="items" file="menus/game"/>
-					<string id="hint" value="Options"/>
-				</widget>
-
-				<!-- Date  -->
-				<container class="plain_box" appearance="navigation/date/button" file="header/date"/>
-
-				<!-- Continue Button -->
-				<container file="header/continue"/>
-
+				<!-- Hide on prefences -->
+				<container file="header_right">
+					<attachment class="test_global_attachment" get_property="scid" value="23" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
+				</container>
+				
 			</container>
+
 		</container>
 	</container>
 
