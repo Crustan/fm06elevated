@@ -10,7 +10,10 @@ no mode attribute equals mode="0"
 #### Hide if not fullscreen mode
     <attachment class="test_global_attachment" get_property="FS  " value="true" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
 
-#### Hide if preferences screen
+#### Hide if intro screen
+    <attachment class="test_global_attachment" get_property="scid" value="2" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
+
+#### Hide if NOT intro screen
     <attachment class="test_global_attachment" get_property="scid" value="2" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
 
 #### Hide if the game isn't set up yet 
@@ -57,7 +60,16 @@ measure (eg. -1), and maybe has other elements on the side.
     <layout kind="stick_to_object_attachment" priority="1" target="ibng" get_side="right" set_side="left" move_side="true" offset="8"/>
 
 ## Screen ID:s
-Every screen ha an ID that's used for disabling, enabling different components (see Conditionals above)
+Every screen has an ID that's used for disabling, enabling different components (see Conditionals above)
 
+* Intro/Start - 0
 * Intro/Start - 2
+* Team - 10
 * Match - 22
+* Preferences - 23
+
+* 3 - ? (used in Shoot skin header.xml)
+* 6 - ? (used in Shoot skin header.xml)
+* 16 - ? (used in Shoot skin header.xml)
+* 47 - ? (used in Shoot skin header.xml)
+* 61 - ? (used in Shoot skin header.xml)
