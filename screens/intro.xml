@@ -6,7 +6,7 @@
 		<layout class="fit_children_attachment" alignment="horizontal,fill" inset="0" offset="0"/>
 		<layout class="fit_children_attachment" alignment="vertical" inset="0" offset="16"/>
 		<layout class="arrange_horizontal_attachment" alignment="center" offset="0"/>
-		
+
 		<layout class="stick_to_sides_attachment" alignment="top" inset="0" layout_children="true"/>
 		<!-- resume -->
 		<widget class="action_button" id="resb" appearance="setup/resume_game" click_event="resu" auto_size="all">
@@ -82,7 +82,5 @@
 			<layout class="centre_in_parent_attachment" alignment="horizontal" priority="1"/>
 		</widget>
 	</container>
-
-	
 
 </screen>
