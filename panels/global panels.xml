@@ -17,10 +17,9 @@
 
 		<!-- Sidebar -->
 		<container class="bordered_box" appearance="sidebar/sidebar" file="sidebar">
+			<layout class="stick_to_sides_attachment" alignment="left" inset="0" offset="0" />
 			<!-- Hide on intro -->
 			<attachment class="test_global_attachment" get_property="scid" value="2" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
-
-			<layout class="stick_to_sides_attachment" alignment="left" inset="0" offset="0" />
 		</container>
 
 		<container>
@@ -31,83 +30,8 @@
 		</container>
 
 		<!-- Main Box -->
-		<container>
+		<container file="main/main">
 			<layout class="fill_space_attachment" inset="0" offset="0"/>
-
-			<!-- Semi transparent background for main area  -->
-			<widget class="bordered_box" appearance="boxes/mainbox/paper">
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-				<layout class="stick_to_object_attachment" target="foot" get_side="top" set_side="bottom" offset="-5"/>
-			</widget>
-			<!-- <container file="mainbox">
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-
-				stick to top of footer panel
-				<layout class="stick_to_object_attachment" target="foot" get_side="top" set_side="bottom" offset="-5"/>
-			</container> -->
-
-			<!-- Panels Box -->
-			<!-- Contains global panels - also the container for the screen -->
-			<container id="pnls">
-				<layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-
-				<!-- header area at top of screen - with title, menus, etc -->
-				<container id="head" file="header">
-					<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" offset="0"/>
-
-					<!-- Hide on intro -->
-					<attachment class="test_global_attachment" get_property="scid" value="2" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
-				</container>
-
-				<!-- nav area under header, with current links -->
-				<container file="nav">
-					<layout class="fit_children_attachment" aligment="vertical" inset="0" offset="0"/>
-					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
-					<layout class="stick_to_sides_attachment" alignment="top" inset="56"/>
-					<!-- Hide on intro -->
-					<attachment class="test_global_attachment" get_property="scid" value="2" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
-				</container>
-
-				<!-- footer area at bottom of screen - with ticker, breadcrumbs, etc -->
-				<container id="foot" file="footer">
-					<layout class="stick_to_sides_attachment" alignment="horizontal, bottom" inset="0"/>
-				</container>
-
-				<!-- sections area on the side of the screen -->
-				<container id="sect" file="sections">
-					<!-- stick to left of screen -->
-					<layout class="stick_to_sides_attachment" alignment="top" inset="100"/>
-					<layout class="stick_to_sides_attachment" alignment="left" inset="0"/>
-					<layout class="fit_children_attachment" alignment="horizontal" offset="0"/>
-
-					<!-- stick to top of footer panel -->
-					<layout class="stick_to_object_attachment" target="foot" get_side="top" set_side="bottom" offset="3"/>
-
-					<!-- Hide on intro -->
-					<attachment class="test_global_attachment" get_property="scid" value="2" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
-					<!-- hide this panel if fullscreen mode -->
-					<attachment class="test_global_attachment" get_property="FS  " value="true" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-				</container>
-
-				<!-- screen content area -->
-				<container id="scca">
-					<layout class="stick_to_sides_attachment" alignment="left" layout_children="true" inset="0"/>
-					<layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true" inset="0"/>
-					<layout class="stick_to_sides_attachment" alignment="top" layout_children="true" inset="0"/>
-					<layout class="stick_to_sides_attachment" alignment="vertical" layout_children="true" inset="0"/>
-					<layout class="fill_space_attachment" inset="0"/>
-				</container>
-
-				<!-- Maximize / Minimize -->
-				<!-- Hide on intro -->
-				<!-- <container id="fullscreen" file="fullscreen">
-					<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
-					<layout class="stick_to_sides_attachment" alignment="top" inset="100"/>
-					<attachment class="test_global_attachment" get_property="scid" value="2" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
-				</container> -->
-
-			</container>
-
 		</container>
 
 	</container>

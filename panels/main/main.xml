@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE panel SYSTEM "http://www.sigames.com/dtds/sios/panel.dtd">
+
+<panel title="main">
+  <!-- Semi transparent background for main area  -->
+  <widget class="bordered_box" appearance="boxes/mainbox/paper">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+    <layout class="stick_to_object_attachment" target="foot" get_side="top" set_side="bottom" offset="-5"/>
+  </widget>
+
+  <!-- Panels Box -->
+  <!-- Contains global panels - also the container for the screen -->
+  <container id="pnls">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+
+    <!-- header area at top of screen - with title, menus, etc -->
+    <container id="head" file="header">
+      <layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0" offset="0"/>
+
+      <!-- Hide on intro -->
+      <attachment class="test_global_attachment" get_property="scid" value="2" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
+    </container>
+
+    <!-- titlebar area under the header -->
+    <container height="42">
+      <!-- MAGIC NUMBER! 57px is the height of header -->
+      <layout class="stick_to_sides_attachment" alignment="top" inset="57" offset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0"/>
+
+      <layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" layout_children="true"/>
+
+      <!-- Hide on intro -->
+      <attachment class="test_global_attachment" get_property="scid" value="2" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
+
+      <!-- Panel graphic - COLOUR -->
+      <widget class="picture" id="pict" file="navigation/titlebar" auto-size="all" cached="true" rthr="68">
+        <attachment class="get_global_attachment" get_property="bkcl" set_property="colr"/>
+        <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+      </widget>
+
+      <!-- Screen dependant actions -->
+      <container id="acts">
+        <layout class="arrange_horizontal_attachment" align="left" inset="0" offset="0" gap="0"/>
+        <widget class="modal_menu" auto_size="all" id="sNMM">
+          <flags id="appearance" value="actions"/>
+          <flags id="spec" value="text,small"/>
+          <flags id="alignment" value="left, centre_y"/>
+
+          <layout class="stick_to_sides_attachment" alignment="top,horizontal" />
+          <layout class="arrange_horizontal_attachment" alignment="right"/>
+
+          <attachment class="get_global_attachment" get_property="acts" set_property="itms" skip_if_resetting="false" priority="1"/>
+
+          <!-- Hide if match or team screen -->
+          <attachment class="test_global_attachment" get_property="scid" set_property="hidn" skip_if_null="false" skip_if_resetting="false" skip_if_false="true" priority="1">
+            <list id="value">
+              <flags id="value" value="22"/>
+              <flags id="value" value="10"/>
+            </list>
+          </attachment>
+
+          <!-- Hide if no actions ? -->
+          <attachment class="test_global_attachment" get_property="acts" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
+        </widget>
+      </container>
+
+    </container>
+    <!-- nav area under header, with current links -->
+    <!-- <container file="nav">
+      <layout class="fit_children_attachment" aligment="vertical" inset="0" offset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="top" inset="56"/>
+      Hide on intro
+      <attachment class="test_global_attachment" get_property="scid" value="2" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
+    </container> -->
+
+    <!-- footer area at bottom of screen - with ticker, breadcrumbs, etc -->
+    <container id="foot" file="footer">
+      <layout class="stick_to_sides_attachment" alignment="horizontal, bottom" inset="0"/>
+    </container>
+
+    <!-- sections area on the side of the screen -->
+    <container id="sect" file="sections">
+      <!-- stick to left of screen -->
+      <layout class="stick_to_sides_attachment" alignment="top" inset="113"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+      <layout class="fit_children_attachment" alignment="all" offset="0"/>
+
+      <!-- stick to top of footer panel -->
+      <layout class="stick_to_object_attachment" target="foot" get_side="top" set_side="bottom" offset="3"/>
+
+      <!-- Hide on intro -->
+      <attachment class="test_global_attachment" get_property="scid" value="2" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
+      <!-- hide this panel if fullscreen mode -->
+      <attachment class="test_global_attachment" get_property="FS  " value="true" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
+    </container>
+
+    <!-- screen content area -->
+    <container id="scca">
+      <layout class="stick_to_sides_attachment" alignment="left" layout_children="true" inset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true" inset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="top" layout_children="true" inset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="vertical" layout_children="true" inset="0"/>
+      <layout class="fill_space_attachment" inset="0"/>
+    </container>
+
+    <!-- Maximize / Minimize -->
+    <!-- Hide on intro -->
+    <!-- <container id="fullscreen" file="fullscreen">
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="top" inset="100"/>
+      <attachment class="test_global_attachment" get_property="scid" value="2" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
+    </container> -->
+
+  </container>
+</panel>
