@@ -35,16 +35,16 @@
 				<layout class="arrange_horizontal_attachment" offset="0" inset="0" layout="88,32,50,-1" gap="0" />
 
 				<!-- History Back & Forward -->
-				<container id="history" file="header/history"/>
+				<container id="history" file="header/left/history"/>
 
 				<!-- Quick Flicks -->
-				<container id="quickflicks" file="header/quickflicks"/>
+				<container id="quickflicks" file="header/left/quickflicks"/>
 
 				<!-- Team Logo -->
-				<container file="header/logo"/>
+				<container file="header/left/logo"/>
 
 				<!-- Title -->
-				<container file="header/title"/>
+				<container file="header/left/title"/>
 
 			</container>
 
@@ -55,17 +55,17 @@
 				<layout class="stick_to_sides_attachment" alignment="vertical" inset="0" offset="0" layout_children="true"/>
 				<!-- <layout class="arrange_horizontal_attachment" offset="0" inset="0" layout="-1" gap="0" /> Replaced with ↓-->
 				<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0" layout_children="true"/>
-				
-				<!-- Show on prefences  -->
-				<container file="header_right_pref">
-					<attachment class="test_global_attachment" get_property="scid" value="23" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>	
+
+				<!-- On Preferences screen, show only world menu and  -->
+				<container file="header_actions_preferences">
+					<attachment class="test_global_attachment" get_property="scid" value="23" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
 				</container>
 
 				<!-- Hide on prefences -->
-				<container file="header_right">
+				<container file="header_actions">
 					<attachment class="test_global_attachment" get_property="scid" value="23" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
 				</container>
-				
+
 			</container>
 
 		</container>
