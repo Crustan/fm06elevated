@@ -24,7 +24,7 @@
     <!-- titlebar area under the header -->
     <container height="42">
       <!-- MAGIC NUMBER! 57px is the height of header -->
-      <layout class="stick_to_sides_attachment" alignment="top" inset="57" offset="0"/>
+      <layout class="stick_to_sides_attachment" alignment="top" inset="56" offset="0"/>
       <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" offset="0"/>
 
       <layout class="fit_children_attachment" alignment="vertical" offset="0"/>
