@@ -119,7 +119,7 @@
 	<!-- used for various dividing lines in tables -->
 	<colour name="default foreground" red="255" green="255" blue="255"/>
 	<!-- default screen foreground colour -->
-	<colour name="default background" red="80" green="179" blue="116"/>
+	<colour name="default background" red="20" green="115" blue="105"/>
 	<!-- default screen background colour -->
 	<!--<colour name="default background" red="50" green="102" blue="151"/>-->	<!-- default screen background colour -->
 	<colour name="default outline" red="0" green="0" blue="0"/>
