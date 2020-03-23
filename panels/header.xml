@@ -9,7 +9,6 @@
 
 	<!-- STANDARD HEADER ======================================================================== -->
 	<container id="NHdr" height="56">
-		<layout class="stick_to_sides_attachment" alignment="all" inset="0" layout_children="true"/>
 
 		<!-- Hide on intro -->
 		<attachment class="test_global_attachment" get_property="scid" value="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
@@ -72,8 +71,10 @@
 
 	<!-- MATCH HEADER ======================================================================== -->
 	<container id="Mhdr">
+		<!-- Show on match screen -->
 		<attachment class="test_global_attachment" get_property="scid" value="22" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
 
+		<!-- we want the panel to be as high as it's highest content -->
 		<layout class="fit_children_attachment" alignment="vertical" inset="0" offset="0"/>
 		<!-- Inset here should be same width as Header Right -->
 		<layout class="stick_to_sides_attachment" alignment="right" inset="300"/>
