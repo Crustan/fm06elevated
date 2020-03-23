@@ -2,10 +2,8 @@
 <!DOCTYPE panel SYSTEM "http://www.sigames.com/dtds/sios/panel.dtd">
 
 <panel title="sections">
-  <layout class="stick_to_sides_attachment" alignment="left" inset="0" layout_children="true"/>
-  <layout class="arrange_vertical_attachment" alignment="bottom,extend" gap="-1"/>
-
-
+  <layout class="arrange_vertical_attachment" alignment="top,extend" gap="-1"/>
+  <layout class="stick_to_sides_attachment" alignment="top" inset="100" layout_children="true"/>
 
   <!-- top bit with sections in -->
   <container id="scts" appearance="navigation/tree">
@@ -35,51 +33,4 @@
       </widget>
     </container>
   </container>
-
-  <!-- bottom bit with actions in -->
-  <container id="acts">
-    <layout class="fit_children_attachment" alignment="horizontal" offset="0" group="1"/>
-    <layout class="fit_children_attachment" alignment="vertical" offset="12" group="0"/>
-
-    <!-- bottom of the sections area -->
-    <widget class="picture" id="bott" auto_size="horizontal" file="navigation/treelower" cached="true" group="1">
-      <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
-
-      <!-- setting group=1 ensures that this widget isn't included in the widgets
-                   that the vertical fit_children_attachments operate on -->
-    </widget>
-
-    <!-- Actions Panels -->
-    <!-- Only one of these should be visible at any time -->
-    <widget class="match_controls_panel" auto_size="vertical" hidden="true" id="sMCP">
-      <layout class="stick_to_sides_attachment" alignment="top,horizontal" />
-      <attachment class="test_global_attachment" get_property="scid" value="22" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-
-    </widget>
-
-    <widget class="team_actions_panel" auto_size="vertical" hidden="false" id="sTAP">
-      <layout class="stick_to_sides_attachment" alignment="top,horizontal" />
-      <attachment class="test_global_attachment" get_property="scid" value="10" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
-
-    </widget>
-
-    <widget class="modal_menu" auto_size="vertical" id="sNMM">
-      <flags id="appearance" value="actions"/>
-      <flags id="spec" value="text,small"/>
-      <layout class="stick_to_sides_attachment" alignment="top,horizontal" />
-      <attachment class="get_global_attachment" get_property="acts" set_property="itms" skip_if_resetting="false" priority="1"/>
-
-      <attachment class="test_global_attachment" get_property="scid" set_property="hidn" skip_if_null="false" skip_if_resetting="false" skip_if_false="true" priority="1">
-        <list id="value">
-          <flags id="value" value="22"/>
-          <flags id="value" value="10"/>
-        </list>
-      </attachment>
-
-      <attachment class="test_global_attachment" get_property="acts" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
-
-    </widget>
-
-  </container>
-
 </panel>
