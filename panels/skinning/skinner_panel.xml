@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE panel SYSTEM "http://www.sigames.com/dtds/sios/panel.dtd">
+
+<panel name="skinner_panel">
+  <attachment class="moveable_attachment"/>
+  <layout class="stick_to_sides_attachment" alignment="bottom, right" inset="60"/>
+  <layout class="stick_to_sides_attachment" alignment="bottom" layout_children="true"/>
+  <layout class="centre_in_parent_attachment" alignment="horizontal" offset="0" layout_children="true"/>
+
+  <widget class="action_button" text="Preferences" auto_size="all" appearance="button/button">
+    <!-- Show on screen that is not preferences -->
+    <attachment class="test_global_attachment" get_property="scid" value="23" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
+    <event id="click_event" event_id="PREF" event_target="scrn"/>
+  </widget>
+
+  <widget class="action_button" text="Confirm" auto_size="all" appearance="button/button">
+    <!-- Show on preferences screen -->
+    <attachment class="test_global_attachment" get_property="scid" value="23" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
+    <event id="click_event" event_id="conf" event_target="scrn"/>
+  </widget>
+</panel>

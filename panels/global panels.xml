@@ -47,28 +47,8 @@
 		<attachment class="get_global_attachment" get_property="prgp" set_property="prgp"/>
 	</container>
 
-	<!-- RADESTOCK'S SKINNER PANEL: Remove this when done skinning-->
-
-	<container class="titled_box" title="" width="160" height="50" appearance="boxes/hints" colour="black" size="8" alignment="centre">
-		<layout class="stick_to_sides_attachment" alignment="bottom, right" inset="100"/>
-		<attachment class="moveable_attachment"/>
-		<widget class="action_button" text="Reload Skin" auto_size="vertical" appearance="button/button" width="148">
-			<attachment class="test_global_attachment" get_property="scid" value="23" mode="0" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
-			<event id="click_event" event_id="sPRF" event_target="scrn"/>
-			<layout class="stick_to_sides_attachment" alignment="bottom" inset="5"/>
-			<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0"/>
-		</widget>
-
-		<widget class="action_button" text="Confirm" auto_size="vertical" appearance="button/button" width="148">
-			<attachment class="test_global_attachment" get_property="scid" value="23" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false" priority="1"/>
-			<event id="click_event" event_id="conf" event_target="scrn"/>
-			<layout class="stick_to_sides_attachment" alignment="bottom" inset="5"/>
-			<layout class="centre_in_parent_attachment" alignment="horizontal" offset="0"/>
-		</widget>
-
-	</container>
-
-	<!-- END OF SKINNER PANEL -->
+	<!-- RADESTOCK'S SKINNER PANEL: Remove this when done skinning -->
+	<container width="160" height="50" file="skinning/skinner_panel" />
 
 
 </panel>
