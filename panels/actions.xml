@@ -2,30 +2,7 @@
 <!DOCTYPE panel SYSTEM "http://www.sigames.com/dtds/sios/panel.dtd">
 
 <panel title="actions">
-  <!-- first, we tell this container to lay out its content from left to right -->
-  <!-- <layout class="arrange_horizontal_attachment" alignment="left"/> -->
-
-  <!-- then we tell it to make sure that all of its content sticks to the -->
-  <!-- top and bottom of the panel -->
-  <!-- <layout class="centre_in_parent_attachment" alignment="vertical" layout_children="true" priority="1"/> -->
-
-  <!-- we want the panel to be as wide as all of it's content added together -->
-  <!-- <layout class="fit_children_attachment" alignment="horizontal,fill"/> -->
-
-  <!-- we want the panel to be as high as it's highest content -->
-  <!-- <layout class="fit_children_attachment" alignment="vertical" offset="0"/> -->
-
-
-
-  <layout class="fit_children_attachment" alignment="horizontal" offset="300" group="0"/>
-  <layout class="fit_children_attachment" alignment="vertical" offset="0" group="0"/>
-
-  <!-- REMOVED BACKGROUND OF BOTTOM ACTIONS -->
-  <!-- bottom of the sections area -->
-  <!-- <widget class="picture" id="bott" auto_size="horizontal" file="navigation/treelower" group="1">
-      <layout class="stick_to_sides_attachment" alignment="all" inset="50"/>
-      <!~~ setting group=1 ensures that this widget isn't included in the widgets that the vertical fit_children_attachments operate on ~~>
-    </widget> -->
+  <layout class="fit_children_attachment" alignment="vertical"/>
 
   <!-- Actions Panels -->
   <!-- Only one of these should be visible at any time -->
@@ -41,15 +18,15 @@
     <attachment class="test_global_attachment" get_property="scid" value="10" mode="1" set_property="hidn" skip_if_null="false" skip_if_resetting="false"/>
   </widget>
 
-  <widget class="modal_menu" auto_size="vertical" id="sNMM">
-    <flags id="appearance" value="actions"/>
-    <flags id="spec" value="text"/>
-    <layout class="stick_to_sides_attachment" alignment="top,horizontal" />
+  <widget class="modal_menu" appearance="actions" spec="text" auto_size="all" id="sNMM">
+    <layout class="stick_to_sides_attachment" alignment="right,vertical" />
+    <layout class="fit_children_attachment" alignment="horizontal,fill"/>
+
+    <!-- <layout class="arrange_horizontal_attachment" alignment="right" /> -->
     <!-- <layout class="stick_to_sides_attachment" alignment="all" inset="0" /> -->
-    <!-- <layout class="fit_children_attachment" alignment="horizontal" offset="0"/> -->
 
+    <attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
     <attachment class="get_global_attachment" get_property="acts" set_property="itms" skip_if_resetting="false" priority="1"/>
-
     <!-- Hide if match screen or team screen -->
     <attachment class="test_global_attachment" get_property="scid" set_property="hidn" skip_if_null="false" skip_if_resetting="false" skip_if_false="true" priority="1">
       <list id="value">
