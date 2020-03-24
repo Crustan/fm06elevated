@@ -3,39 +3,12 @@
   <flags id="event_target" value="scrn"/>
 
   <list id="items">
-    <record>
-      <string id="text" value="Preferences" />
-      <flags id="event_id" value="PREF" />
-    </record>
-
-    <record id="gsta">
-      <string id="text" value="Game Status" />
-      <flags id="event_id" value="STAT" />
-    </record>
-
-    <record id="ghof">
-      <string id="text" value="Hall of Fame" />
-      <flags id="event_id" value="FAME" />
-    </record>
-
-    <record>
-      <string id="text" value="Refresh Media Comments[COMMENT reload comments; tree view]" />
-      <flags id="event_id" value="RMCT" />
-    </record>
-
-    <record id="gsvg">
-      <string id="text" value="Save Game" />
-      <flags id="event_id" value="SAVE" />
-    </record>
-
-    <record id="gsva">
-      <string id="text" value="Save Game As..." />
-      <flags id="event_id" value="SAVA" />
-    </record>
-
-    <record>
-      <string id="text" value="Quit Game" />
-      <flags id="event_id" value="QUIT" />
-    </record>
+    <record text="Preferences" event_id="PREF"/>
+    <record id="gsta" text="Game Status" event_id="STAT" />
+    <record id="ghof" text="Hall of Fame" event_id="FAME"/>
+    <record text="Refresh Media Comments[COMMENT reload comments; tree view]" event_id="RMCT"/>
+    <record id="gsvg" text="Save Game" event_id="SAVE"/>
+    <record id="gsva" text="Save Game As..." event_id="SAVA"/>
+    <record text="Quit Game" event_id="QUIT"/>
   </list>
 </record>
