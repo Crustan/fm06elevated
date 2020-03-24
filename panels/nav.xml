@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE panel SYSTEM "http://www.sigames.com/dtds/sios/panel.dtd">
+
+<panel title="nav" height="42">
+  <layout class="fit_children_attachment" alignment="vertical" offset="0"/>
+  <!-- <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0" layout_children="true"/>
+  <layout class="arrange_horizontal_attachment" alignment="right,extend" gap="-1"/> -->
+
+  <!-- Panel graphic - COLOUR -->
+  <widget class="picture" id="pict" file="navigation/titlebar" auto-size="all" cached="true" rthr="68">
+    <attachment class="get_global_attachment" get_property="bkcl" set_property="colr"/>
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0"/>
+  </widget>
+
+  <!-- Screen dependant actions -->
+  <container id="acts" file="actions">
+    <layout class="stick_to_sides_attachment" alignment="all" inset="0" offset="0"/>
+  </container>
+  <!-- <container id="scts">
+    <layout class="fit_children_attachment" alignment="horizontal" offset="0"/>
+
+    <flags id="scroll_bar_class" value="scroll_bar_vertical_blue" />
+
+    <layout class="stick_to_sides_attachment" alignment="left,extend" inset="8"/>
+    <layout class="stick_to_sides_attachment" alignment="right" inset="8"/>
+    <!~~ <layout class="stick_to_sides_attachment" alignment="vertical" inset="35"/> ~~>
+
+    <widget class="tree_menu" id="tree" auto_size="vertical">
+
+      <layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+      <attachment class="get_global_attachment" get_property="subo" set_property="itms" skip_if_null="false"/>
+      <attachment class="get_global_attachment" get_property="ssub" set_property="slct" skip_if_null="true"/>
+      <flags id="spec" value="text,small"/>
+
+      <record id="sele" event_id="none" event_target="scrn"/>
+    </widget>
+  </container> -->
+
+</panel>
