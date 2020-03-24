@@ -1,0 +1,86 @@
+<panel id="tapn">
+
+	<layout class="arrange_vertical_attachment" alignment="bottom" offset="0" gap="0" />
+	<layout class="fit_children_attachment" alignment="vertical" gap="0" offset="0" />
+	<layout class="stick_to_sides_attachment" alignment="horizontal" inset="0"/>
+
+	<attachment class="get_global_attachment" get_property="uTAP" set_property="uTAP" skip_if_null="true"/>
+
+	<container id="tacc">
+
+		<layout class="arrange_vertical_attachment" alignment="top" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal" layout_children="true"/>
+		<layout class="fit_children_attachment" alignment="vertical" offset="0" gap="0" />
+		<layout class="stick_to_sides_attachment" alignment="horizontal,top" inset="0"/>
+
+		<widget id="tame" class="modal_menu" appearance="actions" spec="text" auto_size="vertical" select_event="tams">
+			<attachment class="get_global_attachment" get_property="fcol" set_property="colr"/>
+			<list id="items">
+				<!-- debug only options -->
+				<record id="debg" text="Debug Options[COMMENT - NOT FOR TRANSLATION]">
+					<list id="items">
+						<record id="frma" text="Fire Manager[COMMENT - NOT FOR TRANSLATION]" />
+						<record id="eqab" text="Equalise player abilities[COMMENT - NOT FOR TRANSLATION]" />
+						<record id="fttw" text="Force team to win[COMMENT - NOT FOR TRANSLATION]" />
+						<record id="fttl" text="Force team to lose[COMMENT - NOT FOR TRANSLATION]" />
+						<record id="cspl" text="Chairman sell player[COMMENT - NOT FOR TRANSLATION]" />
+						<record id="cbpl" text="Chairman buy player[COMMENT - NOT FOR TRANSLATION]" />
+						<record id="sat1" text="Set abilities to 1[COMMENT - NOT FOR TRANSLATION]" />
+						<record id="mxpa" text="Maximise physical attributes[COMMENT - NOT FOR TRANSLATION]" />
+						<record id="ohjo" text="Offer Human Job[COMMENT - NOT FOR TRANSLATION]" />
+						<record id="ohrc" text="Offer Human Relegation Fate Contract [COMMENT - NOT FOR TRANSLATION]" />
+						<record id="ohpc" text="Offer Human Promotion Fate Contract [COMMENT - NOT FOR TRANSLATION]" />
+						<record id="pbop" text="Process Budget Options for division [COMMENT - NOT FOR TRANSLATION]" />
+					</list>
+				</record>
+
+				<record id="rmco" text="Release Comment">
+					<list id="items">
+						<record id="rnoc" text="Next Opponent Comment" />
+						<record id="rpoc" text="Previous Opponent Comment" />
+					</list>
+				</record>
+				<record id="rlmc" text="Manager Comment" />
+
+				<!-- these IDs must match the team screen event IDs that handles the actions -->
+				<record id="tac!" text="Take Control" />
+				<record id="pkfv" text="Pick As Favourite Club" />
+				<record id="pkfr" text="Pick For Friendly" />
+				<record id="add?" text="Add Club To Proposal" />
+				<record id="apj?" text="Apply For Job" />
+				<record id="diij" text="Declare Interest In Job" />
+				<record id="gtrp" text="Get Team Report" />
+
+				<!-- euro/continental squad selection (in/out) -->
+				<record id="css?" text="Confirm Selection[COMMENT - team screen pick euro/continental squad]" />
+				<record id="ssau" text="Auto Select[COMMENT - team screen pick euro/continental squad]" />
+				<record id="clss" text="Clear Selection[COMMENT - team screen pick euro/continental squad]" />
+
+				<!-- squad number submission -->
+				<record id="cfsn" text="Submit Numbers[COMMENT - team screen submit squad numbers]" />
+				<record id="ausn" text="Auto Number[COMMENT - team screen submit squad numbers]" />
+				<record id="clsn" text="Clear Numbers[COMMENT - team screen submit squad numbers]" />
+
+				<!-- squad numbers button, for Spanish teams-->
+				<record id="sqnu" text="Squad Numbers" />
+
+				<!-- normal team selection -->
+				<record id="aatp" text="Ask To Pick[COMMENT - team screen team selection]">
+					<list id="items" />
+				</record>
+
+				<record id="clts" text="Clear Selection[COMMENT - team screen team selection]" />
+				<record id="clsq" text="Remove All Players[COMMENT - national team pool]" />
+
+				<record id="tsel" text="Team Selections[COMMENT - team screen team selection]">
+					<list id="items">
+					</list>
+				</record>
+
+			</list>
+
+		</widget>
+
+	</container>
+
+</panel>
